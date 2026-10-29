@@ -1,0 +1,105 @@
+import { ArrowRight, Target } from 'lucide-react';
+import { SCENARIOS } from '../../domain/forecast';
+import { hasTarget } from '../../domain/schema';
+import { formatDeadline, formatNumber, scenarioLabel } from '../../lib/format';
+import { usePlanner } from '../../state/PlannerProvider';
+import { Card, CardHeader } from '../ui/Card';
+import { SaveStatusPill, StorageBadge } from '../ui/SaveStatus';
+
+function Row({ label, value, hint }: { label: string; value: string; hint?: string | undefined }) {
+  return (
+    <div className="flex items-start justify-between gap-3 py-2">
+      <div>
+        <dt className="text-xs text-muted">{label}</dt>
+        {hint ? <dd className="mt-0.5 text-[11px] text-faint">{hint}</dd> : null}
+      </div>
+      <dd className="num shrink-0 text-sm font-semibold text-ink">{value}</dd>
+    </div>
+  );
+}
+
+export function SummaryPanel({ onOpenDashboard }: { onOpenDashboard: () => void }) {
+  const { view, activeScenario } = usePlanner();
+  const active = view.projections[activeScenario];
+  const targetLabel = hasTarget(view.plan) ? view.plan.targetName.trim() : 'your target';
+
+  return (
+    <div className="flex flex-col gap-4 lg:sticky lg:top-8">
+      <Card labelledBy="summary-title">
+        <CardHeader id="summary-title" title="At a glance" icon={<Target size={16} />} />
+
+        {!hasTarget(view.plan) ? (
+          <p className="mb-3 rounded-lg border border-line-soft bg-void/40 px-3 py-2 text-[11px] leading-relaxed text-faint">
+            Name a target above to label these numbers. The budget math works either way.
+          </p>
+        ) : null}
+
+        <dl className="divide-y divide-line-soft/70">
+          <Row label="Available now" value={`${formatNumber(view.budget.wishes)} wishes`} hint={`${formatNumber(view.budget.leftoverPrimogems)} Primogems left over`} />
+          <Row
+            label={`Projected by ${formatDeadline(view.plan.endDate)}`}
+            value={view.canForecast ? `${formatNumber(active.projected.wishes)} wishes` : '—'}
+            hint={`${scenarioLabel(activeScenario)} scenario`}
+          />
+          <Row
+            label="Worst-case guarantee"
+            value={`${formatNumber(view.guarantee.worstCaseWishes)} wishes`}
+            hint={`for ${targetLabel}`}
+          />
+          <Row
+            label="Gap to guarantee"
+            value={
+              view.canForecast
+                ? view.guaranteeShortfall === 0
+                  ? 'Covered'
+                  : `${formatNumber(view.guaranteeShortfall)} short`
+                : '—'
+            }
+            hint={
+              view.canForecast && view.guaranteeShortfall > 0
+                ? `≈ ${formatNumber(view.guaranteePrimogemsNeeded)} Primogems`
+                : undefined
+            }
+          />
+        </dl>
+
+        {!view.canForecast ? (
+          <p className="mt-3 rounded-lg border border-ember/25 bg-ember/8 px-3 py-2 text-[11px] leading-relaxed text-ember/90">
+            Fix the banner dates to enable projections.
+          </p>
+        ) : null}
+      </Card>
+
+      <Card labelledBy="scenario-title">
+        <h2 id="scenario-title" className="text-sm font-semibold text-ink">
+          Scenario totals
+        </h2>
+        <dl className="mt-2 divide-y divide-line-soft/70">
+          {SCENARIOS.map((scenario) => (
+            <div key={scenario.id} className="flex items-center justify-between gap-3 py-1.5">
+              <dt className={`text-xs ${scenario.id === activeScenario ? 'text-gold' : 'text-muted'}`}>
+                {scenario.label}
+              </dt>
+              <dd className="num text-xs font-medium text-ink">
+                {view.canForecast
+                  ? `${formatNumber(view.projections[scenario.id].projected.wishes)} wishes`
+                  : '—'}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </Card>
+
+      <div className="flex flex-wrap items-center justify-between gap-2 px-1">
+        <SaveStatusPill />
+        <button type="button" onClick={onOpenDashboard} className="btn btn-ghost !px-2 !py-2.5 text-xs">
+          Dashboard
+          <ArrowRight size={13} aria-hidden="true" />
+        </button>
+      </div>
+      <div className="px-1">
+        <StorageBadge />
+      </div>
+    </div>
+  );
+}
