@@ -121,7 +121,13 @@ export function OpportunityRow({
             </span>
 
             <span className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-faint">
-              <span>{rewardLabel(opportunity, state === 'available' ? evaluation.remainingPrimogems : undefined)}</span>
+              <span>
+                {rewardLabel(
+                  opportunity,
+                  state === 'available' ? evaluation.remainingPrimogems : undefined,
+                  state === 'available' ? (evaluation.rewardMaxPrimogems ?? undefined) : undefined,
+                )}
+              </span>
               <span aria-hidden="true">·</span>
               <span className="inline-flex items-center gap-1">
                 <Clock size={10} aria-hidden="true" />
@@ -259,6 +265,22 @@ export function OpportunityRow({
                     ) : (
                       <span className="text-muted">{opportunity.sourceLabel ?? 'No source'}</span>
                     )}
+                    {opportunity.corroboratingSourceUrl ? (
+                      <>
+                        <span className="text-faint" aria-hidden="true">
+                          ·
+                        </span>
+                        <a
+                          href={opportunity.corroboratingSourceUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="inline-flex items-center gap-1 text-accent hover:underline"
+                        >
+                          {opportunity.corroboratingSourceLabel ?? 'Corroborating source'}
+                          <ExternalLink size={10} aria-hidden="true" />
+                        </a>
+                      </>
+                    ) : null}
                     {opportunity.verifiedOn ? (
                       <span className="text-faint">· checked {formatDisplayDate(opportunity.verifiedOn)}</span>
                     ) : null}

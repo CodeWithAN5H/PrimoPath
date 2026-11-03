@@ -214,7 +214,9 @@ function buildReasons(
     const range = opportunity.reward.primogemsMax
       ? ` (${opportunity.reward.primogems.toLocaleString('en-US')}–${opportunity.reward.primogemsMax.toLocaleString('en-US')})`
       : '';
-    reasons.push(`Reward is an estimate${range}; the conservative value is counted.`);
+    reasons.push(
+      `Reward is an estimate${range}; the conservative value is counted, and the maximum requires fuller completion.`,
+    );
   } else {
     reasons.push('You entered this reward, so PrimoPath cannot verify it.');
   }

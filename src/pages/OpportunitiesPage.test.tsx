@@ -132,6 +132,51 @@ describe('Opportunities page', () => {
     });
   });
 
+  it('explains Theater completion tiers and exposes both reward sources', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    const row = within(allSection())
+      .getByText('Imaginarium Theater — Performance Tour')
+      .closest('article');
+    expect(row).not.toBeNull();
+    await user.click(within(row!).getByRole('button', { name: 'Details' }));
+
+    expect(within(row!).getByText(/620 Primogems through Act 8 \(Hard\)/)).toBeInTheDocument();
+    expect(within(row!).getByText(/800 through Act 10 \(Visionary\)/)).toBeInTheDocument();
+    expect(within(row!).getByText(/1,000 for a full Lunar clear/)).toBeInTheDocument();
+    expect(within(row!).getByText(/optimizer counts the conservative 620/)).toBeInTheDocument();
+
+    expect(
+      within(row!).getByRole('link', { name: 'Fandom — Imaginarium Theater reward table' }),
+    ).toHaveAttribute('href', 'https://genshin-impact.fandom.com/wiki/Imaginarium_Theater');
+    expect(
+      within(row!).getByRole('link', { name: 'Timesaver — 2026 season reward tiers' }),
+    ).toHaveAttribute(
+      'href',
+      'https://timesaver.gg/blog/genshin-imaginarium-theater-october-2026',
+    );
+  });
+
+  it('shows the official Abyss reset source and the corroborating amount source', async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    const row = within(allSection()).getByText('Spiral Abyss — Floors 9–12').closest('article');
+    expect(row).not.toBeNull();
+    await user.click(within(row!).getByRole('button', { name: 'Details' }));
+
+    expect(
+      within(row!).getByRole('link', { name: 'HoYoverse Support — monthly reset schedule' }),
+    ).toHaveAttribute(
+      'href',
+      'https://support.hoyoverse.com/hc/en-us/articles/50333950598553-When-does-the-Spiral-Abyss-reset-and-what-are-the-rewards',
+    );
+    expect(
+      within(row!).getByRole('link', { name: 'Fandom — 800 Primogems per reset' }),
+    ).toHaveAttribute('href', 'https://genshin-impact.fandom.com/wiki/Primogem');
+  });
+
   it('navigates to the planner from the ranking explanation', async () => {
     const user = userEvent.setup();
     const { onNavigate } = renderPage();

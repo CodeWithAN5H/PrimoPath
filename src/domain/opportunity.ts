@@ -76,6 +76,13 @@ const isoDateSchema = z
 
 const integerSchema = (min: number, max: number) => z.number().int().min(min).max(max);
 
+const sourceUrlSchema = z
+  .string()
+  .max(300)
+  .refine((value) => /^https?:\/\//.test(value), {
+    message: 'Use a full http(s) source URL.',
+  });
+
 export const rewardAmountSchema = z.object({
   primogems: integerSchema(0, 200_000),
   fates: integerSchema(0, 100),
@@ -117,14 +124,11 @@ export const opportunitySchema = z
       .default([]),
     /** `progress` lets the user record partial completion (exploration, quests). */
     tracking: z.enum(['completion', 'progress']).default('completion'),
-    sourceUrl: z
-      .string()
-      .max(300)
-      .refine((value) => /^https?:\/\//.test(value), {
-        message: 'Use a full http(s) source URL.',
-      })
-      .optional(),
+    sourceUrl: sourceUrlSchema.optional(),
     sourceLabel: z.string().max(80).optional(),
+    /** Second, directly accessible source corroborating the reward amount. */
+    corroboratingSourceUrl: sourceUrlSchema.optional(),
+    corroboratingSourceLabel: z.string().max(80).optional(),
     verifiedOn: isoDateSchema.optional(),
     verification: verificationSchema,
     isCustom: z.boolean().default(false),

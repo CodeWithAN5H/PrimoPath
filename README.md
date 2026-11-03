@@ -5,9 +5,11 @@ Enter your Primogems, Intertwined Fates and banner state; PrimoPath shows what y
 what you will have by the deadline under three income scenarios, and how far that is from a
 worst-case guarantee.
 
-**Milestones 1, 1.5 and 2 are complete.** Milestone 2 adds a sourced reward catalogue, local
-opportunity progress and a transparent Primogem opportunity optimizer. Milestone 3 — wish
-probability simulation — is next. No accounts, no live game data, no fabricated reward numbers.
+**Milestones 1, 1.5, 2 and 2.1 are complete.** Milestone 2 adds a sourced reward catalogue, local
+opportunity progress and a transparent Primogem opportunity optimizer. Milestone 2.1 corrects the
+Imaginarium Theater completion tiers and stores a corroborating source for the Spiral Abyss amount.
+Milestone 3 — wish probability simulation — is next. No accounts, no live game data, no fabricated
+reward numbers.
 
 ## Quick start
 
@@ -78,16 +80,17 @@ small: only rewards whose amounts are stable enough to attribute are bundled.
 | Opportunity                        | Reward counted               | Reset             | Status    | Source                                                                                                                        |
 | ---------------------------------- | ---------------------------- | ----------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Daily Commissions                  | 60 Primogems/day             | Daily             | Verified  | [HoYoLAB — Daily Commissions guide](https://www.hoyolab.com/article/35566777)                                                  |
-| Spiral Abyss — Floors 9–12         | 800 Primogems/reset          | Monthly, day 16   | Verified  | [HoYoverse Support — Abyss reset and rewards](https://support.hoyoverse.com/hc/en-us/articles/50333950598553-When-does-the-Spiral-Abyss-reset-and-what-are-the-rewards) |
-| Imaginarium Theater — Performance Tour | 620 Primogems (range 620–1,000) | Monthly, day 1 | Estimated | [Hu Tao guide — Imaginarium Theater rewards](https://hutaobot.moe/guides/imaginarium-theater/rewards)                          |
+| Spiral Abyss — Floors 9–12         | 800 Primogems/reset          | Monthly, day 16   | Verified  | [HoYoverse Support — reset schedule](https://support.hoyoverse.com/hc/en-us/articles/50333950598553-When-does-the-Spiral-Abyss-reset-and-what-are-the-rewards) · [Fandom — 800 per reset](https://genshin-impact.fandom.com/wiki/Primogem) |
+| Imaginarium Theater — Performance Tour | 620 counted; 800 through Act 10; 1,000 full Lunar | Monthly, day 1 | Estimated | [Fandom — reward table](https://genshin-impact.fandom.com/wiki/Imaginarium_Theater) · [Timesaver — 2026 tiers](https://timesaver.gg/blog/genshin-imaginarium-theater-october-2026) |
 
-All three were checked on **2026-11-03**. Notes and limitations:
+All three were re-checked on **2026-11-03** for Milestone 2.1. Notes and limitations:
 
-- The Spiral Abyss reset schedule is official; the 800-Primogem-per-reset amount is corroborated by
-  the community Hu Tao guide named in the entry's source label.
-- Imaginarium Theater is **estimated**: sources disagree between 620 and 1,000 Primogems. The
-  optimizer always counts the conservative 620 and displays the full range. The upper bound is never
-  added to a total.
+- The Spiral Abyss reset is official and remains the primary source: it resets monthly on the 16th.
+  The 800-Primogem amount is stored as a directly accessible corroborating Fandom source.
+- Imaginarium Theater is **estimated**: 620 is the cumulative reward through Act 8 (Hard), 800
+  through Act 10 (Visionary), and 1,000 for a full Lunar clear including both Arcanum challenges.
+  The optimizer counts only 620 and shows 1,000 as the upper bound. The higher tiers require higher
+  difficulty and a full Lunar clear; 620 is a conservative floor, not the maximum.
 - Effort figures (15/120/90 minutes) are PrimoPath estimates for ranking only, not sourced data.
 - A source older than 180 days is flagged stale in the row and loses 8 score points. It is not hidden.
 - Catalogue updates are a code change: edit the entry, update `verifiedOn`, and run `npm test`.
@@ -267,7 +270,7 @@ component.
 
 ## Tests
 
-`npm test` runs **165 tests across 21 files**:
+`npm test` runs **171 tests across 21 files**:
 
 | File | Covers |
 | --- | --- |
@@ -278,9 +281,9 @@ component.
 | `domain/plannerView.test.ts` | composed budget/projection/gap, blocked forecasting, banner switching |
 | `domain/itemSearch.test.ts` | partial, case-insensitive, multi-word, typo, punctuation, duplicate and limit behaviour |
 | `domain/items.test.ts` | dataset size, unique ids/names, typed lookups, artwork URL and fallback |
-| `domain/opportunity.test.ts` | schema rejection cases, reset cycles, availability, recurring/one-time remaining rewards, progress, overrides, expiry and staleness |
+| `domain/opportunity.test.ts` | schema rejection cases, corroborating sources, legacy saved-state compatibility, reset cycles, availability, recurring/one-time remaining rewards, progress, overrides, expiry and staleness |
 | `domain/rewardOptimizer.test.ts` | ranking order, explanations, stale penalty, exclusions, repeatable cycles, daily/label/name double-counting, totals and plan gaps |
-| `data/rewardCatalogue.test.ts` | every entry validates, unique ids/names, source and date present, stable categories only, expected resets |
+| `data/rewardCatalogue.test.ts` | every entry validates, unique ids/names, sources and dates present, Theater completion tiers, official-plus-corroborating Abyss sources, stable categories only, expected resets |
 | `state/plannerReducer.test.ts` | planner reward add/update/remove, id immutability, independent plans |
 | `state/opportunityReducer.test.ts` | complete/undo, per-reset toggles, clamps, reward correction, plan selection, custom add/update/delete, hydration |
 | `lib/storage.test.ts` | planner round-trip, corrupt-record rejection without data deletion, localStorage fallback |
@@ -290,14 +293,14 @@ component.
 | `components/ui/ItemCombobox.test.tsx` | typeahead, partial/typo matches, keyboard select, Escape, clear, custom target, kind filtering |
 | `components/ui/Disclosure.test.tsx` | expanded state, inert/aria-hidden when collapsed |
 | `components/layout/AppShell.test.tsx` | five destinations, active state, working Opportunities destination, navigation callback, skip link |
-| `pages/OpportunitiesPage.test.tsx` | overview, ranking order, category/status filters, complete/undo, custom create, duplicate rejection, remount persistence, planner link |
+| `pages/OpportunitiesPage.test.tsx` | overview, ranking order, category/status filters, complete/undo, custom create, duplicate rejection, remount persistence, Theater tier text and source links, Abyss source links, planner link |
 | `pages/HomePage.test.tsx` | live opportunity summary and navigation into Opportunities |
 
 Storage tests run against `fake-indexeddb`; UI interaction tests use Testing Library. Layout and the
-Milestone 2 flows were additionally checked in Chromium at 1280 × 900, 390 × 844 and 360 × 800:
+Milestone 2/2.1 flows were additionally checked in Chromium at 1280 × 900, 390 × 844 and 360 × 800:
 filters, complete/undo including an immediate refresh, custom create/edit/delete, plan selection,
-double-counting with daily income, the Home card, and zero horizontal overflow with no console
-errors.
+double-counting with daily income, the Theater tier/range and source links, the Home card, and zero
+horizontal overflow with no console errors.
 
 ## Known limitations
 
@@ -305,7 +308,7 @@ errors.
   user entering amounts; they are never inferred from progress percentages.
 - Effort estimates and the 1,600-Primogem score normalisation are heuristics, not measured data.
   They rank sensibly but are not a claim about your account.
-- Imaginarium Theater's reward is presented as a 620–1,000 range with only 620 counted.
+- Imaginarium Theater counts only the conservative 620 (Act 8); 800 (Visionary) and 1,000 (full Lunar) are shown but never added to totals.
 - Rewards are counted to the planner's banner deadline only, and no automatic detection of
   in-game completion exists.
 - Progress is local to one browser profile. Clearing site data removes it; there is no account or

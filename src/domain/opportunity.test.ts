@@ -12,6 +12,7 @@ import {
   normalizeOpportunityName,
   occurrencesAvailable,
   opportunitySchema,
+  opportunityStateSchema,
   remainingReward,
 } from './opportunity';
 
@@ -47,6 +48,45 @@ describe('opportunity schema', () => {
     expect(parsed.tracking).toBe('completion');
     expect(parsed.isCustom).toBe(false);
     expect(parsed.description).toBe('');
+  });
+
+  it('accepts an optional corroborating source and rejects an invalid one', () => {
+    const parsed = opportunitySchema.parse({
+      ...makeOpportunity(),
+      corroboratingSourceUrl: 'https://example.org/reward-table',
+      corroboratingSourceLabel: 'Example reward table',
+    });
+    expect(parsed.corroboratingSourceUrl).toBe('https://example.org/reward-table');
+    expect(parsed.corroboratingSourceLabel).toBe('Example reward table');
+
+    const invalid = opportunitySchema.safeParse({
+      ...makeOpportunity(),
+      corroboratingSourceUrl: 'not-a-url',
+    });
+    expect(invalid.success).toBe(false);
+  });
+
+  it('keeps saved state without the new corroborating-source fields compatible', () => {
+    const legacyCustom = makeOpportunity({
+      id: 'legacy-custom',
+      name: 'Legacy custom',
+      isCustom: true,
+      verification: 'user-entered',
+      sourceUrl: undefined,
+      sourceLabel: undefined,
+      verifiedOn: undefined,
+    });
+    const parsed = opportunityStateSchema.parse({
+      version: 1,
+      records: [{ id: 'daily-commissions', status: 'done' }],
+      custom: [legacyCustom],
+    });
+
+    expect(parsed.records[0]?.id).toBe('daily-commissions');
+    expect(parsed.records[0]?.status).toBe('done');
+    expect(parsed.custom[0]?.name).toBe('Legacy custom');
+    expect(parsed.custom[0]?.corroboratingSourceUrl).toBeUndefined();
+    expect(parsed.custom[0]?.corroboratingSourceLabel).toBeUndefined();
   });
 
   it('rejects an inverted reward range', () => {

@@ -48,6 +48,28 @@ describe('bundled reward catalogue', () => {
     expect(daily?.reward.primogems).toBe(60);
   });
 
+  it('documents every Imaginarium Theater completion tier', () => {
+    const theatre = REWARD_CATALOGUE.find((entry) => entry.id === 'imaginarium-theater-season');
+
+    expect(theatre?.description).toContain('620 Primogems through Act 8 (Hard)');
+    expect(theatre?.description).toContain('800 through Act 10 (Visionary)');
+    expect(theatre?.description).toContain('1,000 for a full Lunar clear');
+    expect(theatre?.reward).toEqual({ primogems: 620, fates: 0, primogemsMax: 1000 });
+    expect(theatre?.sourceUrl).toBe('https://genshin-impact.fandom.com/wiki/Imaginarium_Theater');
+    expect(theatre?.corroboratingSourceUrl).toBe(
+      'https://timesaver.gg/blog/genshin-imaginarium-theater-october-2026',
+    );
+  });
+
+  it('keeps the official Abyss reset source and corroborates the 800 amount separately', () => {
+    const abyss = REWARD_CATALOGUE.find((entry) => entry.id === 'spiral-abyss-reset');
+
+    expect(abyss?.sourceUrl).toContain('support.hoyoverse.com');
+    expect(abyss?.corroboratingSourceUrl).toBe('https://genshin-impact.fandom.com/wiki/Primogem');
+    expect(abyss?.reward.primogems).toBe(800);
+    expect(abyss?.recurrence).toEqual({ kind: 'monthly', days: [16] });
+  });
+
   it('keeps effort estimates positive for every entry', () => {
     for (const entry of REWARD_CATALOGUE) {
       expect(entry.effortMinutes).toBeGreaterThan(0);
