@@ -1,0 +1,3155 @@
+{
+  "meta": {
+    "source": "genshin-db",
+    "sourceVersion": "5.2.14",
+    "sourceLicense": "MIT",
+    "generatedOn": "2026-11-03",
+    "note": "Character and weapon names, rarities and UI icon filenames only. No gameplay statistics are stored.",
+    "characters": 124,
+    "weapons": 253
+  },
+  "characters": [
+    {
+      "id": "10000005",
+      "name": "Aether",
+      "rarity": 5,
+      "element": "None",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_PlayerBoy",
+      "sideIcon": "UI_AvatarIcon_Side_PlayerBoy"
+    },
+    {
+      "id": "10000121",
+      "name": "Aino",
+      "rarity": 4,
+      "element": "Hydro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Aino",
+      "sideIcon": "UI_AvatarIcon_Side_Aino"
+    },
+    {
+      "id": "10000038",
+      "name": "Albedo",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Albedo",
+      "sideIcon": "UI_AvatarIcon_Side_Albedo"
+    },
+    {
+      "id": "10000078",
+      "name": "Alhaitham",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Alhatham",
+      "sideIcon": "UI_AvatarIcon_Side_Alhatham"
+    },
+    {
+      "id": "10000062",
+      "name": "Aloy",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Aloy",
+      "sideIcon": "UI_AvatarIcon_Side_Aloy"
+    },
+    {
+      "id": "10000148",
+      "name": "Alyosha",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Alyosha",
+      "sideIcon": "UI_AvatarIcon_Side_Alyosha"
+    },
+    {
+      "id": "10000021",
+      "name": "Amber",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Ambor",
+      "sideIcon": "UI_AvatarIcon_Side_Ambor"
+    },
+    {
+      "id": "10000057",
+      "name": "Arataki Itto",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Itto",
+      "sideIcon": "UI_AvatarIcon_Side_Itto"
+    },
+    {
+      "id": "10000096",
+      "name": "Arlecchino",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Arlecchino",
+      "sideIcon": "UI_AvatarIcon_Side_Arlecchino"
+    },
+    {
+      "id": "10000082",
+      "name": "Baizhu",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Baizhuer",
+      "sideIcon": "UI_AvatarIcon_Side_Baizhuer"
+    },
+    {
+      "id": "10000014",
+      "name": "Barbara",
+      "rarity": 4,
+      "element": "Hydro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Barbara",
+      "sideIcon": "UI_AvatarIcon_Side_Barbara"
+    },
+    {
+      "id": "10000024",
+      "name": "Beidou",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Beidou",
+      "sideIcon": "UI_AvatarIcon_Side_Beidou"
+    },
+    {
+      "id": "10000032",
+      "name": "Bennett",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Bennett",
+      "sideIcon": "UI_AvatarIcon_Side_Bennett"
+    },
+    {
+      "id": "10000072",
+      "name": "Candace",
+      "rarity": 4,
+      "element": "Hydro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Candace",
+      "sideIcon": "UI_AvatarIcon_Side_Candace"
+    },
+    {
+      "id": "10000088",
+      "name": "Charlotte",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Charlotte",
+      "sideIcon": "UI_AvatarIcon_Side_Charlotte"
+    },
+    {
+      "id": "10000104",
+      "name": "Chasca",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Chasca",
+      "sideIcon": "UI_AvatarIcon_Side_Chasca"
+    },
+    {
+      "id": "10000090",
+      "name": "Chevreuse",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Chevreuse",
+      "sideIcon": "UI_AvatarIcon_Side_Chevreuse"
+    },
+    {
+      "id": "10000094",
+      "name": "Chiori",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Chiori",
+      "sideIcon": "UI_AvatarIcon_Side_Chiori"
+    },
+    {
+      "id": "10000036",
+      "name": "Chongyun",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Chongyun",
+      "sideIcon": "UI_AvatarIcon_Side_Chongyun"
+    },
+    {
+      "id": "10000107",
+      "name": "Citlali",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Citlali",
+      "sideIcon": "UI_AvatarIcon_Side_Citlali"
+    },
+    {
+      "id": "10000098",
+      "name": "Clorinde",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Clorinde",
+      "sideIcon": "UI_AvatarIcon_Side_Clorinde"
+    },
+    {
+      "id": "10000067",
+      "name": "Collei",
+      "rarity": 4,
+      "element": "Dendro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Collei",
+      "sideIcon": "UI_AvatarIcon_Side_Collei"
+    },
+    {
+      "id": "10000125",
+      "name": "Columbina",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Columbina",
+      "sideIcon": "UI_AvatarIcon_Side_Columbina"
+    },
+    {
+      "id": "10000071",
+      "name": "Cyno",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Cyno",
+      "sideIcon": "UI_AvatarIcon_Side_Cyno"
+    },
+    {
+      "id": "10000115",
+      "name": "Dahlia",
+      "rarity": 4,
+      "element": "Hydro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Dahlia",
+      "sideIcon": "UI_AvatarIcon_Side_Dahlia"
+    },
+    {
+      "id": "10000079",
+      "name": "Dehya",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Dehya",
+      "sideIcon": "UI_AvatarIcon_Side_Dehya"
+    },
+    {
+      "id": "10000016",
+      "name": "Diluc",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Diluc",
+      "sideIcon": "UI_AvatarIcon_Side_Diluc"
+    },
+    {
+      "id": "10000039",
+      "name": "Diona",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Diona",
+      "sideIcon": "UI_AvatarIcon_Side_Diona"
+    },
+    {
+      "id": "10000068",
+      "name": "Dori",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Dori",
+      "sideIcon": "UI_AvatarIcon_Side_Dori"
+    },
+    {
+      "id": "10000123",
+      "name": "Durin",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Durin",
+      "sideIcon": "UI_AvatarIcon_Side_Durin"
+    },
+    {
+      "id": "10000099",
+      "name": "Emilie",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Emilie",
+      "sideIcon": "UI_AvatarIcon_Side_Emilie"
+    },
+    {
+      "id": "10000112",
+      "name": "Escoffier",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Escoffier",
+      "sideIcon": "UI_AvatarIcon_Side_Escoffier"
+    },
+    {
+      "id": "10000051",
+      "name": "Eula",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Eula",
+      "sideIcon": "UI_AvatarIcon_Side_Eula"
+    },
+    {
+      "id": "10000076",
+      "name": "Faruzan",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Faruzan",
+      "sideIcon": "UI_AvatarIcon_Side_Faruzan"
+    },
+    {
+      "id": "10000031",
+      "name": "Fischl",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Fischl",
+      "sideIcon": "UI_AvatarIcon_Side_Fischl"
+    },
+    {
+      "id": "10000120",
+      "name": "Flins",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Flins",
+      "sideIcon": "UI_AvatarIcon_Side_Flins"
+    },
+    {
+      "id": "10000085",
+      "name": "Freminet",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Freminet",
+      "sideIcon": "UI_AvatarIcon_Side_Freminet"
+    },
+    {
+      "id": "10000089",
+      "name": "Furina",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Furina",
+      "sideIcon": "UI_AvatarIcon_Side_Furina"
+    },
+    {
+      "id": "10000092",
+      "name": "Gaming",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Gaming",
+      "sideIcon": "UI_AvatarIcon_Side_Gaming"
+    },
+    {
+      "id": "10000037",
+      "name": "Ganyu",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Ganyu",
+      "sideIcon": "UI_AvatarIcon_Side_Ganyu"
+    },
+    {
+      "id": "10000055",
+      "name": "Gorou",
+      "rarity": 4,
+      "element": "Geo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Gorou",
+      "sideIcon": "UI_AvatarIcon_Side_Gorou"
+    },
+    {
+      "id": "10000046",
+      "name": "Hu Tao",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Hutao",
+      "sideIcon": "UI_AvatarIcon_Side_Hutao"
+    },
+    {
+      "id": "10000110",
+      "name": "Iansan",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Iansan",
+      "sideIcon": "UI_AvatarIcon_Side_Iansan"
+    },
+    {
+      "id": "10000113",
+      "name": "Ifa",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Ifa",
+      "sideIcon": "UI_AvatarIcon_Side_Ifa"
+    },
+    {
+      "id": "10000127",
+      "name": "Illuga",
+      "rarity": 4,
+      "element": "Geo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Illuga",
+      "sideIcon": "UI_AvatarIcon_Side_Illuga"
+    },
+    {
+      "id": "10000116",
+      "name": "Ineffa",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Ineffa",
+      "sideIcon": "UI_AvatarIcon_Side_Ineffa"
+    },
+    {
+      "id": "10000124",
+      "name": "Jahoda",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Jahoda",
+      "sideIcon": "UI_AvatarIcon_Side_Jahoda"
+    },
+    {
+      "id": "10000003",
+      "name": "Jean",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Qin",
+      "sideIcon": "UI_AvatarIcon_Side_Qin"
+    },
+    {
+      "id": "10000100",
+      "name": "Kachina",
+      "rarity": 4,
+      "element": "Geo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Kachina",
+      "sideIcon": "UI_AvatarIcon_Side_Kachina"
+    },
+    {
+      "id": "10000047",
+      "name": "Kaedehara Kazuha",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Kazuha",
+      "sideIcon": "UI_AvatarIcon_Side_Kazuha"
+    },
+    {
+      "id": "10000015",
+      "name": "Kaeya",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Kaeya",
+      "sideIcon": "UI_AvatarIcon_Side_Kaeya"
+    },
+    {
+      "id": "10000002",
+      "name": "Kamisato Ayaka",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Ayaka",
+      "sideIcon": "UI_AvatarIcon_Side_Ayaka"
+    },
+    {
+      "id": "10000066",
+      "name": "Kamisato Ayato",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Ayato",
+      "sideIcon": "UI_AvatarIcon_Side_Ayato"
+    },
+    {
+      "id": "10000081",
+      "name": "Kaveh",
+      "rarity": 4,
+      "element": "Dendro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Kaveh",
+      "sideIcon": "UI_AvatarIcon_Side_Kaveh"
+    },
+    {
+      "id": "10000042",
+      "name": "Keqing",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Keqing",
+      "sideIcon": "UI_AvatarIcon_Side_Keqing"
+    },
+    {
+      "id": "10000101",
+      "name": "Kinich",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Kinich",
+      "sideIcon": "UI_AvatarIcon_Side_Kinich"
+    },
+    {
+      "id": "10000061",
+      "name": "Kirara",
+      "rarity": 4,
+      "element": "Dendro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Momoka",
+      "sideIcon": "UI_AvatarIcon_Side_Momoka"
+    },
+    {
+      "id": "10000029",
+      "name": "Klee",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Klee",
+      "sideIcon": "UI_AvatarIcon_Side_Klee"
+    },
+    {
+      "id": "10000056",
+      "name": "Kujou Sara",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Sara",
+      "sideIcon": "UI_AvatarIcon_Side_Sara"
+    },
+    {
+      "id": "10000065",
+      "name": "Kuki Shinobu",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Shinobu",
+      "sideIcon": "UI_AvatarIcon_Side_Shinobu"
+    },
+    {
+      "id": "10000108",
+      "name": "Lan Yan",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Lanyan",
+      "sideIcon": "UI_AvatarIcon_Side_Lanyan"
+    },
+    {
+      "id": "10000119",
+      "name": "Lauma",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Lauma",
+      "sideIcon": "UI_AvatarIcon_Side_Lauma"
+    },
+    {
+      "id": "10000074",
+      "name": "Layla",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Layla",
+      "sideIcon": "UI_AvatarIcon_Side_Layla"
+    },
+    {
+      "id": "10000130",
+      "name": "Linnea",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Linnea",
+      "sideIcon": "UI_AvatarIcon_Side_Linnea"
+    },
+    {
+      "id": "10000006",
+      "name": "Lisa",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Lisa",
+      "sideIcon": "UI_AvatarIcon_Side_Lisa"
+    },
+    {
+      "id": "10000129",
+      "name": "Lohen",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Lohen",
+      "sideIcon": "UI_AvatarIcon_Side_Lohen"
+    },
+    {
+      "id": "10000007",
+      "name": "Lumine",
+      "rarity": 5,
+      "element": "None",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_PlayerGirl",
+      "sideIcon": "UI_AvatarIcon_Side_PlayerGirl"
+    },
+    {
+      "id": "10000083",
+      "name": "Lynette",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Linette",
+      "sideIcon": "UI_AvatarIcon_Side_Linette"
+    },
+    {
+      "id": "10000084",
+      "name": "Lyney",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Liney",
+      "sideIcon": "UI_AvatarIcon_Side_Liney"
+    },
+    {
+      "id": "10000117",
+      "name": "Manekin",
+      "rarity": 5,
+      "element": "None",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_MannequinBoy",
+      "sideIcon": "UI_AvatarIcon_Side_MannequinBoy"
+    },
+    {
+      "id": "10000118",
+      "name": "Manekina",
+      "rarity": 5,
+      "element": "None",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_MannequinGirl",
+      "sideIcon": "UI_AvatarIcon_Side_MannequinGirl"
+    },
+    {
+      "id": "10000106",
+      "name": "Mavuika",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Mavuika",
+      "sideIcon": "UI_AvatarIcon_Side_Mavuika"
+    },
+    {
+      "id": "10000080",
+      "name": "Mika",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Mika",
+      "sideIcon": "UI_AvatarIcon_Side_Mika"
+    },
+    {
+      "id": "10000041",
+      "name": "Mona",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Mona",
+      "sideIcon": "UI_AvatarIcon_Side_Mona"
+    },
+    {
+      "id": "10000102",
+      "name": "Mualani",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Mualani",
+      "sideIcon": "UI_AvatarIcon_Side_Mualani"
+    },
+    {
+      "id": "10000073",
+      "name": "Nahida",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Nahida",
+      "sideIcon": "UI_AvatarIcon_Side_Nahida"
+    },
+    {
+      "id": "10000091",
+      "name": "Navia",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Navia",
+      "sideIcon": "UI_AvatarIcon_Side_Navia"
+    },
+    {
+      "id": "10000122",
+      "name": "Nefer",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Nefer",
+      "sideIcon": "UI_AvatarIcon_Side_Nefer"
+    },
+    {
+      "id": "10000087",
+      "name": "Neuvillette",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Neuvillette",
+      "sideIcon": "UI_AvatarIcon_Side_Neuvillette"
+    },
+    {
+      "id": "10000131",
+      "name": "Nicole",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Nicole",
+      "sideIcon": "UI_AvatarIcon_Side_Nicole"
+    },
+    {
+      "id": "10000070",
+      "name": "Nilou",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Nilou",
+      "sideIcon": "UI_AvatarIcon_Side_Nilou"
+    },
+    {
+      "id": "10000027",
+      "name": "Ningguang",
+      "rarity": 4,
+      "element": "Geo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Ningguang",
+      "sideIcon": "UI_AvatarIcon_Side_Ningguang"
+    },
+    {
+      "id": "10000034",
+      "name": "Noelle",
+      "rarity": 4,
+      "element": "Geo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Noel",
+      "sideIcon": "UI_AvatarIcon_Side_Noel"
+    },
+    {
+      "id": "10000150",
+      "name": "Odette",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Odette",
+      "sideIcon": "UI_AvatarIcon_Side_Odette"
+    },
+    {
+      "id": "10000105",
+      "name": "Ororon",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Olorun",
+      "sideIcon": "UI_AvatarIcon_Side_Olorun"
+    },
+    {
+      "id": "10000132",
+      "name": "Prune",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Prune",
+      "sideIcon": "UI_AvatarIcon_Side_Prune"
+    },
+    {
+      "id": "10000035",
+      "name": "Qiqi",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Qiqi",
+      "sideIcon": "UI_AvatarIcon_Side_Qiqi"
+    },
+    {
+      "id": "10000052",
+      "name": "Raiden Shogun",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Shougun",
+      "sideIcon": "UI_AvatarIcon_Side_Shougun"
+    },
+    {
+      "id": "10000020",
+      "name": "Razor",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Razor",
+      "sideIcon": "UI_AvatarIcon_Side_Razor"
+    },
+    {
+      "id": "10000045",
+      "name": "Rosaria",
+      "rarity": 4,
+      "element": "Cryo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Rosaria",
+      "sideIcon": "UI_AvatarIcon_Side_Rosaria"
+    },
+    {
+      "id": "10000133",
+      "name": "Sandrone",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_MarionetteNew",
+      "sideIcon": "UI_AvatarIcon_Side_MarionetteNew"
+    },
+    {
+      "id": "10000054",
+      "name": "Sangonomiya Kokomi",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Kokomi",
+      "sideIcon": "UI_AvatarIcon_Side_Kokomi"
+    },
+    {
+      "id": "10000053",
+      "name": "Sayu",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Sayu",
+      "sideIcon": "UI_AvatarIcon_Side_Sayu"
+    },
+    {
+      "id": "10000097",
+      "name": "Sethos",
+      "rarity": 4,
+      "element": "Electro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Sethos",
+      "sideIcon": "UI_AvatarIcon_Side_Sethos"
+    },
+    {
+      "id": "10000063",
+      "name": "Shenhe",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Shenhe",
+      "sideIcon": "UI_AvatarIcon_Side_Shenhe"
+    },
+    {
+      "id": "10000059",
+      "name": "Shikanoin Heizou",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Heizo",
+      "sideIcon": "UI_AvatarIcon_Side_Heizo"
+    },
+    {
+      "id": "10000095",
+      "name": "Sigewinne",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Sigewinne",
+      "sideIcon": "UI_AvatarIcon_Side_Sigewinne"
+    },
+    {
+      "id": "10000114",
+      "name": "Skirk",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_SkirkNew",
+      "sideIcon": "UI_AvatarIcon_Side_SkirkNew"
+    },
+    {
+      "id": "10000043",
+      "name": "Sucrose",
+      "rarity": 4,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Sucrose",
+      "sideIcon": "UI_AvatarIcon_Side_Sucrose"
+    },
+    {
+      "id": "10000033",
+      "name": "Tartaglia",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Tartaglia",
+      "sideIcon": "UI_AvatarIcon_Side_Tartaglia"
+    },
+    {
+      "id": "10000050",
+      "name": "Thoma",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Tohma",
+      "sideIcon": "UI_AvatarIcon_Side_Tohma"
+    },
+    {
+      "id": "10000069",
+      "name": "Tighnari",
+      "rarity": 5,
+      "element": "Dendro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Tighnari",
+      "sideIcon": "UI_AvatarIcon_Side_Tighnari"
+    },
+    {
+      "id": "10000111",
+      "name": "Varesa",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Varesa",
+      "sideIcon": "UI_AvatarIcon_Side_Varesa"
+    },
+    {
+      "id": "10000128",
+      "name": "Varka",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Varka",
+      "sideIcon": "UI_AvatarIcon_Side_Varka"
+    },
+    {
+      "id": "10000022",
+      "name": "Venti",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Venti",
+      "sideIcon": "UI_AvatarIcon_Side_Venti"
+    },
+    {
+      "id": "10000143",
+      "name": "Vesna",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Vesna",
+      "sideIcon": "UI_AvatarIcon_Side_Vesna"
+    },
+    {
+      "id": "10000140",
+      "name": "Vodyanitsa",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Vodyanitsa",
+      "sideIcon": "UI_AvatarIcon_Side_Vodyanitsa"
+    },
+    {
+      "id": "10000075",
+      "name": "Wanderer",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Wanderer",
+      "sideIcon": "UI_AvatarIcon_Side_Wanderer"
+    },
+    {
+      "id": "10000086",
+      "name": "Wriothesley",
+      "rarity": 5,
+      "element": "Cryo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Wriothesley",
+      "sideIcon": "UI_AvatarIcon_Side_Wriothesley"
+    },
+    {
+      "id": "10000023",
+      "name": "Xiangling",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Xiangling",
+      "sideIcon": "UI_AvatarIcon_Side_Xiangling"
+    },
+    {
+      "id": "10000093",
+      "name": "Xianyun",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Liuyun",
+      "sideIcon": "UI_AvatarIcon_Side_Liuyun"
+    },
+    {
+      "id": "10000026",
+      "name": "Xiao",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Xiao",
+      "sideIcon": "UI_AvatarIcon_Side_Xiao"
+    },
+    {
+      "id": "10000103",
+      "name": "Xilonen",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Xilonen",
+      "sideIcon": "UI_AvatarIcon_Side_Xilonen"
+    },
+    {
+      "id": "10000025",
+      "name": "Xingqiu",
+      "rarity": 4,
+      "element": "Hydro",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Xingqiu",
+      "sideIcon": "UI_AvatarIcon_Side_Xingqiu"
+    },
+    {
+      "id": "10000044",
+      "name": "Xinyan",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Claymore",
+      "icon": "UI_AvatarIcon_Xinyan",
+      "sideIcon": "UI_AvatarIcon_Side_Xinyan"
+    },
+    {
+      "id": "10000058",
+      "name": "Yae Miko",
+      "rarity": 5,
+      "element": "Electro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Yae",
+      "sideIcon": "UI_AvatarIcon_Side_Yae"
+    },
+    {
+      "id": "10000048",
+      "name": "Yanfei",
+      "rarity": 4,
+      "element": "Pyro",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Feiyan",
+      "sideIcon": "UI_AvatarIcon_Side_Feiyan"
+    },
+    {
+      "id": "10000077",
+      "name": "Yaoyao",
+      "rarity": 4,
+      "element": "Dendro",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Yaoyao",
+      "sideIcon": "UI_AvatarIcon_Side_Yaoyao"
+    },
+    {
+      "id": "10000060",
+      "name": "Yelan",
+      "rarity": 5,
+      "element": "Hydro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Yelan",
+      "sideIcon": "UI_AvatarIcon_Side_Yelan"
+    },
+    {
+      "id": "10000049",
+      "name": "Yoimiya",
+      "rarity": 5,
+      "element": "Pyro",
+      "weaponType": "Bow",
+      "icon": "UI_AvatarIcon_Yoimiya",
+      "sideIcon": "UI_AvatarIcon_Side_Yoimiya"
+    },
+    {
+      "id": "10000109",
+      "name": "Yumemizuki Mizuki",
+      "rarity": 5,
+      "element": "Anemo",
+      "weaponType": "Catalyst",
+      "icon": "UI_AvatarIcon_Mizuki",
+      "sideIcon": "UI_AvatarIcon_Side_Mizuki"
+    },
+    {
+      "id": "10000064",
+      "name": "Yun Jin",
+      "rarity": 4,
+      "element": "Geo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Yunjin",
+      "sideIcon": "UI_AvatarIcon_Side_Yunjin"
+    },
+    {
+      "id": "10000030",
+      "name": "Zhongli",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Polearm",
+      "icon": "UI_AvatarIcon_Zhongli",
+      "sideIcon": "UI_AvatarIcon_Side_Zhongli"
+    },
+    {
+      "id": "10000126",
+      "name": "Zibai",
+      "rarity": 5,
+      "element": "Geo",
+      "weaponType": "Sword",
+      "icon": "UI_AvatarIcon_Zibai",
+      "sideIcon": "UI_AvatarIcon_Side_Zibai"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "13415",
+      "name": "\"The Catch\"",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Mori",
+      "awakenIcon": "UI_EquipIcon_Pole_Mori_Awaken"
+    },
+    {
+      "id": "12426",
+      "name": "\"Ultimate Overlord's Mega Magic Sword\"",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Champion",
+      "awakenIcon": "UI_EquipIcon_Claymore_Champion_Awaken"
+    },
+    {
+      "id": "12516",
+      "name": "A Teaspoon of Transcendence",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_CrystallineSword",
+      "awakenIcon": "UI_EquipIcon_Claymore_CrystallineSword_Awaken"
+    },
+    {
+      "id": "12514",
+      "name": "A Thousand Blazing Suns",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_RadianceSword",
+      "awakenIcon": "UI_EquipIcon_Claymore_RadianceSword_Awaken"
+    },
+    {
+      "id": "14511",
+      "name": "A Thousand Floating Dreams",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Ayus",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Ayus_Awaken"
+    },
+    {
+      "id": "11515",
+      "name": "Absolution",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Estoc",
+      "awakenIcon": "UI_EquipIcon_Sword_Estoc_Awaken"
+    },
+    {
+      "id": "12416",
+      "name": "Akuoumaru",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Maria",
+      "awakenIcon": "UI_EquipIcon_Claymore_Maria_Awaken"
+    },
+    {
+      "id": "15410",
+      "name": "Alley Hunter",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Outlaw",
+      "awakenIcon": "UI_EquipIcon_Bow_Outlaw_Awaken"
+    },
+    {
+      "id": "11414",
+      "name": "Amenoma Kageuchi",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Bakufu",
+      "awakenIcon": "UI_EquipIcon_Sword_Bakufu_Awaken"
+    },
+    {
+      "id": "15502",
+      "name": "Amos' Bow",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Amos",
+      "awakenIcon": "UI_EquipIcon_Bow_Amos_Awaken"
+    },
+    {
+      "id": "14523",
+      "name": "Angelos' Heptades",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_FairyGarden",
+      "awakenIcon": "UI_EquipIcon_Catalyst_FairyGarden_Awaken"
+    },
+    {
+      "id": "14101",
+      "name": "Apprentice's Notes",
+      "rarity": 1,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Apprentice",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Apprentice_Awaken"
+    },
+    {
+      "id": "15508",
+      "name": "Aqua Simulacra",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Kirin",
+      "awakenIcon": "UI_EquipIcon_Bow_Kirin_Awaken"
+    },
+    {
+      "id": "11501",
+      "name": "Aquila Favonia",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Falcon",
+      "awakenIcon": "UI_EquipIcon_Sword_Falcon_Awaken"
+    },
+    {
+      "id": "14427",
+      "name": "Ash-Graven Drinking Horn",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_ConchSprayer",
+      "awakenIcon": "UI_EquipIcon_Catalyst_ConchSprayer_Awaken"
+    },
+    {
+      "id": "15514",
+      "name": "Astral Vulture's Crimson Plumage",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Qoyllorsnova",
+      "awakenIcon": "UI_EquipIcon_Bow_Qoyllorsnova_Awaken"
+    },
+    {
+      "id": "11518",
+      "name": "Athame Artis",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Motsognir",
+      "awakenIcon": "UI_EquipIcon_Sword_Motsognir_Awaken"
+    },
+    {
+      "id": "11517",
+      "name": "Azurelight",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_OuterSword",
+      "awakenIcon": "UI_EquipIcon_Sword_OuterSword_Awaken"
+    },
+    {
+      "id": "14426",
+      "name": "Ballad of the Boundless Blue",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_DandelionPoem",
+      "awakenIcon": "UI_EquipIcon_Catalyst_DandelionPoem_Awaken"
+    },
+    {
+      "id": "13424",
+      "name": "Ballad of the Fjords",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Shanty",
+      "awakenIcon": "UI_EquipIcon_Pole_Shanty_Awaken"
+    },
+    {
+      "id": "12511",
+      "name": "Beacon of the Reed Sea",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Deshret",
+      "awakenIcon": "UI_EquipIcon_Claymore_Deshret_Awaken"
+    },
+    {
+      "id": "13101",
+      "name": "Beginner's Protector",
+      "rarity": 1,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Gewalt",
+      "awakenIcon": "UI_EquipIcon_Pole_Gewalt_Awaken"
+    },
+    {
+      "id": "11522",
+      "name": "Beyond the Chrysalis",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Samosvist",
+      "awakenIcon": "UI_EquipIcon_Sword_Samosvist_Awaken"
+    },
+    {
+      "id": "13303",
+      "name": "Black Tassel",
+      "rarity": 3,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Noire",
+      "awakenIcon": "UI_EquipIcon_Pole_Noire_Awaken"
+    },
+    {
+      "id": "14408",
+      "name": "Blackcliff Agate",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Blackrock",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Blackrock_Awaken"
+    },
+    {
+      "id": "11408",
+      "name": "Blackcliff Longsword",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Blackrock",
+      "awakenIcon": "UI_EquipIcon_Sword_Blackrock_Awaken"
+    },
+    {
+      "id": "13404",
+      "name": "Blackcliff Pole",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Blackrock",
+      "awakenIcon": "UI_EquipIcon_Pole_Blackrock_Awaken"
+    },
+    {
+      "id": "12408",
+      "name": "Blackcliff Slasher",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Blackrock",
+      "awakenIcon": "UI_EquipIcon_Claymore_Blackrock_Awaken"
+    },
+    {
+      "id": "15408",
+      "name": "Blackcliff Warbow",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Blackrock",
+      "awakenIcon": "UI_EquipIcon_Bow_Blackrock_Awaken"
+    },
+    {
+      "id": "14433",
+      "name": "Blackmarrow Lantern",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Ilmarinen",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Ilmarinen_Awaken"
+    },
+    {
+      "id": "12436",
+      "name": "Blade of Atonement",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_GlintstoneClaymore",
+      "awakenIcon": "UI_EquipIcon_Claymore_GlintstoneClaymore_Awaken"
+    },
+    {
+      "id": "13516",
+      "name": "Bloodsoaked Ruins",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_TummaLyhty",
+      "awakenIcon": "UI_EquipIcon_Pole_TummaLyhty_Awaken"
+    },
+    {
+      "id": "12302",
+      "name": "Bloodtainted Greatsword",
+      "rarity": 3,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Siegfry",
+      "awakenIcon": "UI_EquipIcon_Claymore_Siegfry_Awaken"
+    },
+    {
+      "id": "15437",
+      "name": "Breezeborne Refrain",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Windtalker",
+      "awakenIcon": "UI_EquipIcon_Bow_Windtalker_Awaken"
+    },
+    {
+      "id": "11432",
+      "name": "Calamity of Eshu",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_SacrificialNgombe",
+      "awakenIcon": "UI_EquipIcon_Sword_SacrificialNgombe_Awaken"
+    },
+    {
+      "id": "13507",
+      "name": "Calamity Queller",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Santika",
+      "awakenIcon": "UI_EquipIcon_Pole_Santika_Awaken"
+    },
+    {
+      "id": "14513",
+      "name": "Cashflow Supervision",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Wheatley",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Wheatley_Awaken"
+    },
+    {
+      "id": "15431",
+      "name": "Chain Breaker",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Isikhulu",
+      "awakenIcon": "UI_EquipIcon_Bow_Isikhulu_Awaken"
+    },
+    {
+      "id": "11415",
+      "name": "Cinnabar Spindle",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Opus",
+      "awakenIcon": "UI_EquipIcon_Sword_Opus_Awaken"
+    },
+    {
+      "id": "14435",
+      "name": "Clash of Kings",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_SandMemoria",
+      "awakenIcon": "UI_EquipIcon_Catalyst_SandMemoria_Awaken"
+    },
+    {
+      "id": "15426",
+      "name": "Cloudforged",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Ultimatum",
+      "awakenIcon": "UI_EquipIcon_Bow_Ultimatum_Awaken"
+    },
+    {
+      "id": "15407",
+      "name": "Compound Bow",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Exotic",
+      "awakenIcon": "UI_EquipIcon_Bow_Exotic_Awaken"
+    },
+    {
+      "id": "11301",
+      "name": "Cool Steel",
+      "rarity": 3,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Steel",
+      "awakenIcon": "UI_EquipIcon_Sword_Steel_Awaken"
+    },
+    {
+      "id": "15436",
+      "name": "Covenant of Frost and Snow",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_GlintstoneBow",
+      "awakenIcon": "UI_EquipIcon_Bow_GlintstoneBow_Awaken"
+    },
+    {
+      "id": "14515",
+      "name": "Crane's Echoing Call",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_MountainGale",
+      "awakenIcon": "UI_EquipIcon_Catalyst_MountainGale_Awaken"
+    },
+    {
+      "id": "13403",
+      "name": "Crescent Pike",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Exotic",
+      "awakenIcon": "UI_EquipIcon_Pole_Exotic_Awaken"
+    },
+    {
+      "id": "13512",
+      "name": "Crimson Moon's Semblance",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_BloodMoon",
+      "awakenIcon": "UI_EquipIcon_Pole_BloodMoon_Awaken"
+    },
+    {
+      "id": "11304",
+      "name": "Dark Iron Sword",
+      "rarity": 3,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Darker",
+      "awakenIcon": "UI_EquipIcon_Sword_Darker_Awaken"
+    },
+    {
+      "id": "14434",
+      "name": "Dawning Frost",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Ziedas",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Ziedas_Awaken"
+    },
+    {
+      "id": "13405",
+      "name": "Deathmatch",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Gladiator",
+      "awakenIcon": "UI_EquipIcon_Pole_Gladiator_Awaken"
+    },
+    {
+      "id": "12305",
+      "name": "Debate Club",
+      "rarity": 3,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Reasoning",
+      "awakenIcon": "UI_EquipIcon_Claymore_Reasoning_Awaken"
+    },
+    {
+      "id": "13426",
+      "name": "Dialogues of the Desert Sages",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Caduceus",
+      "awakenIcon": "UI_EquipIcon_Pole_Caduceus_Awaken"
+    },
+    {
+      "id": "13517",
+      "name": "Disaster and Remorse",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Carbine",
+      "awakenIcon": "UI_EquipIcon_Pole_Carbine_Awaken"
+    },
+    {
+      "id": "14413",
+      "name": "Dodoco Tales",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Ludiharpastum",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Ludiharpastum_Awaken"
+    },
+    {
+      "id": "13401",
+      "name": "Dragon's Bane",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Stardust",
+      "awakenIcon": "UI_EquipIcon_Pole_Stardust_Awaken"
+    },
+    {
+      "id": "13409",
+      "name": "Dragonspine Spear",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Everfrost",
+      "awakenIcon": "UI_EquipIcon_Pole_Everfrost_Awaken"
+    },
+    {
+      "id": "11101",
+      "name": "Dull Blade",
+      "rarity": 1,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Blunt",
+      "awakenIcon": "UI_EquipIcon_Sword_Blunt_Awaken"
+    },
+    {
+      "id": "12431",
+      "name": "Earth Shaker",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Isikhulu",
+      "awakenIcon": "UI_EquipIcon_Claymore_Isikhulu_Awaken"
+    },
+    {
+      "id": "14436",
+      "name": "Echoes of the Heart",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_GlintstoneCatalyst",
+      "awakenIcon": "UI_EquipIcon_Catalyst_GlintstoneCatalyst_Awaken"
+    },
+    {
+      "id": "15503",
+      "name": "Elegy for the End",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Widsith",
+      "awakenIcon": "UI_EquipIcon_Bow_Widsith_Awaken"
+    },
+    {
+      "id": "11436",
+      "name": "Emberwell",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_GlintstoneSword",
+      "awakenIcon": "UI_EquipIcon_Sword_GlintstoneSword_Awaken"
+    },
+    {
+      "id": "14304",
+      "name": "Emerald Orb",
+      "rarity": 3,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Jade",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Jade_Awaken"
+    },
+    {
+      "id": "15418",
+      "name": "End of the Line",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Fin",
+      "awakenIcon": "UI_EquipIcon_Bow_Fin_Awaken"
+    },
+    {
+      "id": "13509",
+      "name": "Engulfing Lightning",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Narukami",
+      "awakenIcon": "UI_EquipIcon_Pole_Narukami_Awaken"
+    },
+    {
+      "id": "14432",
+      "name": "Etherlight Spindlelute",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_SeeliesLute",
+      "awakenIcon": "UI_EquipIcon_Catalyst_SeeliesLute_Awaken"
+    },
+    {
+      "id": "14506",
+      "name": "Everlasting Moonglow",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Kaleido",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Kaleido_Awaken"
+    },
+    {
+      "id": "11521",
+      "name": "Exaiphanes Blade",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_WeaponQuestSnezhnaya",
+      "awakenIcon": "UI_EquipIcon_Sword_WeaponQuestSnezhnaya"
+    },
+    {
+      "id": "14409",
+      "name": "Eye of Perception",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Truelens",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Truelens_Awaken"
+    },
+    {
+      "id": "15411",
+      "name": "Fading Twilight",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Fallensun",
+      "awakenIcon": "UI_EquipIcon_Bow_Fallensun_Awaken"
+    },
+    {
+      "id": "12513",
+      "name": "Fang of the Mountain King",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_EmeraldSword",
+      "awakenIcon": "UI_EquipIcon_Claymore_EmeraldSword_Awaken"
+    },
+    {
+      "id": "14401",
+      "name": "Favonius Codex",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Zephyrus",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Zephyrus_Awaken"
+    },
+    {
+      "id": "12401",
+      "name": "Favonius Greatsword",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Zephyrus",
+      "awakenIcon": "UI_EquipIcon_Claymore_Zephyrus_Awaken"
+    },
+    {
+      "id": "13407",
+      "name": "Favonius Lance",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Zephyrus",
+      "awakenIcon": "UI_EquipIcon_Pole_Zephyrus_Awaken"
+    },
+    {
+      "id": "11401",
+      "name": "Favonius Sword",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Zephyrus",
+      "awakenIcon": "UI_EquipIcon_Sword_Zephyrus_Awaken"
+    },
+    {
+      "id": "15401",
+      "name": "Favonius Warbow",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Zephyrus",
+      "awakenIcon": "UI_EquipIcon_Bow_Zephyrus_Awaken"
+    },
+    {
+      "id": "12301",
+      "name": "Ferrous Shadow",
+      "rarity": 3,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Glaive",
+      "awakenIcon": "UI_EquipIcon_Claymore_Glaive_Awaken"
+    },
+    {
+      "id": "11413",
+      "name": "Festering Desire",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Magnum",
+      "awakenIcon": "UI_EquipIcon_Sword_Magnum_Awaken"
+    },
+    {
+      "id": "11305",
+      "name": "Fillet Blade",
+      "rarity": 3,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Sashimi",
+      "awakenIcon": "UI_EquipIcon_Sword_Sashimi_Awaken"
+    },
+    {
+      "id": "11425",
+      "name": "Finale of the Deep",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Vorpal",
+      "awakenIcon": "UI_EquipIcon_Sword_Vorpal_Awaken"
+    },
+    {
+      "id": "12432",
+      "name": "Flame-Forged Insight",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Polilith",
+      "awakenIcon": "UI_EquipIcon_Claymore_Polilith_Awaken"
+    },
+    {
+      "id": "11426",
+      "name": "Fleuve Cendre Ferryman",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Machination",
+      "awakenIcon": "UI_EquipIcon_Sword_Machination_Awaken"
+    },
+    {
+      "id": "15430",
+      "name": "Flower-Wreathed Feathers",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Umpakati",
+      "awakenIcon": "UI_EquipIcon_Bow_Umpakati_Awaken"
+    },
+    {
+      "id": "14425",
+      "name": "Flowing Purity",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Vorpal",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Vorpal_Awaken"
+    },
+    {
+      "id": "11431",
+      "name": "Flute of Ezpitzal",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Isikhulu",
+      "awakenIcon": "UI_EquipIcon_Sword_Isikhulu_Awaken"
+    },
+    {
+      "id": "13431",
+      "name": "Footprint of the Rainbow",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Isikhulu",
+      "awakenIcon": "UI_EquipIcon_Pole_Isikhulu_Awaken"
+    },
+    {
+      "id": "12417",
+      "name": "Forest Regalia",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Arakalari",
+      "awakenIcon": "UI_EquipIcon_Claymore_Arakalari_Awaken"
+    },
+    {
+      "id": "12435",
+      "name": "Forged by the Golden Melody",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_EscapeWheel",
+      "awakenIcon": "UI_EquipIcon_Claymore_EscapeWheel_Awaken"
+    },
+    {
+      "id": "13515",
+      "name": "Fractured Halo",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Perdix",
+      "awakenIcon": "UI_EquipIcon_Pole_Perdix_Awaken"
+    },
+    {
+      "id": "11503",
+      "name": "Freedom-Sworn",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Widsith",
+      "awakenIcon": "UI_EquipIcon_Sword_Widsith_Awaken"
+    },
+    {
+      "id": "14412",
+      "name": "Frostbearer",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Everfrost",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Everfrost_Awaken"
+    },
+    {
+      "id": "13435",
+      "name": "Frostbreath",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_FaesCrystalle",
+      "awakenIcon": "UI_EquipIcon_Pole_FaesCrystalle_Awaken"
+    },
+    {
+      "id": "14417",
+      "name": "Fruit of Fulfillment",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Arakalari",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Arakalari_Awaken"
+    },
+    {
+      "id": "12430",
+      "name": "Fruitful Hook",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Umpakati",
+      "awakenIcon": "UI_EquipIcon_Claymore_Umpakati_Awaken"
+    },
+    {
+      "id": "12515",
+      "name": "Gest of the Mighty Wolf",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_EnsisAquilonis",
+      "awakenIcon": "UI_EquipIcon_Claymore_EnsisAquilonis_Awaken"
+    },
+    {
+      "id": "15516",
+      "name": "Golden Frostbound Oath",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Alkonost",
+      "awakenIcon": "UI_EquipIcon_Bow_Alkonost_Awaken"
+    },
+    {
+      "id": "14414",
+      "name": "Hakushin Ring",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Bakufu",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Bakufu_Awaken"
+    },
+    {
+      "id": "13302",
+      "name": "Halberd",
+      "rarity": 3,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Halberd",
+      "awakenIcon": "UI_EquipIcon_Pole_Halberd_Awaken"
+    },
+    {
+      "id": "15414",
+      "name": "Hamayumi",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Bakufu",
+      "awakenIcon": "UI_EquipIcon_Bow_Bakufu_Awaken"
+    },
+    {
+      "id": "11510",
+      "name": "Haran Geppaku Futsu",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Amenoma",
+      "awakenIcon": "UI_EquipIcon_Sword_Amenoma_Awaken"
+    },
+    {
+      "id": "11302",
+      "name": "Harbinger of Dawn",
+      "rarity": 3,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Dawn",
+      "awakenIcon": "UI_EquipIcon_Sword_Dawn_Awaken"
+    },
+    {
+      "id": "11435",
+      "name": "Heretic's Molten Blade",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_SerpentTooth",
+      "awakenIcon": "UI_EquipIcon_Sword_SerpentTooth_Awaken"
+    },
+    {
+      "id": "15101",
+      "name": "Hunter's Bow",
+      "rarity": 1,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Hunters",
+      "awakenIcon": "UI_EquipIcon_Bow_Hunters_Awaken"
+    },
+    {
+      "id": "15511",
+      "name": "Hunter's Path",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Ayus",
+      "awakenIcon": "UI_EquipIcon_Bow_Ayus_Awaken"
+    },
+    {
+      "id": "14524",
+      "name": "Hymn of the Maelstrom",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Bludnye",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Bludnye_Awaken"
+    },
+    {
+      "id": "15419",
+      "name": "Ibis Piercer",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Ibis",
+      "awakenIcon": "UI_EquipIcon_Bow_Ibis_Awaken"
+    },
+    {
+      "id": "13201",
+      "name": "Iron Point",
+      "rarity": 2,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Rod",
+      "awakenIcon": "UI_EquipIcon_Pole_Rod_Awaken"
+    },
+    {
+      "id": "11407",
+      "name": "Iron Sting",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Exotic",
+      "awakenIcon": "UI_EquipIcon_Sword_Exotic_Awaken"
+    },
+    {
+      "id": "15435",
+      "name": "Jade Vista",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_ShatteredMirror",
+      "awakenIcon": "UI_EquipIcon_Bow_ShatteredMirror_Awaken"
+    },
+    {
+      "id": "14505",
+      "name": "Jadefall's Splendor",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Morax",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Morax_Awaken"
+    },
+    {
+      "id": "11416",
+      "name": "Kagotsurube Isshin",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Youtou",
+      "awakenIcon": "UI_EquipIcon_Sword_Youtou_Awaken"
+    },
+    {
+      "id": "14509",
+      "name": "Kagura's Verity",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Narukami",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Narukami_Awaken"
+    },
+    {
+      "id": "12414",
+      "name": "Katsuragikiri Nagamasa",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Bakufu",
+      "awakenIcon": "UI_EquipIcon_Claymore_Bakufu_Awaken"
+    },
+    {
+      "id": "11511",
+      "name": "Key of Khaj-Nisut",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Deshret",
+      "awakenIcon": "UI_EquipIcon_Sword_Deshret_Awaken"
+    },
+    {
+      "id": "15417",
+      "name": "King's Squire",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Arakalari",
+      "awakenIcon": "UI_EquipIcon_Bow_Arakalari_Awaken"
+    },
+    {
+      "id": "13414",
+      "name": "Kitain Cross Spear",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Bakufu",
+      "awakenIcon": "UI_EquipIcon_Pole_Bakufu_Awaken"
+    },
+    {
+      "id": "11512",
+      "name": "Light of Foliar Incision",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Ayus",
+      "awakenIcon": "UI_EquipIcon_Sword_Ayus_Awaken"
+    },
+    {
+      "id": "11519",
+      "name": "Lightbearing Moonshard",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_SilverwareSaw",
+      "awakenIcon": "UI_EquipIcon_Sword_SilverwareSaw_Awaken"
+    },
+    {
+      "id": "11405",
+      "name": "Lion's Roar",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Rockkiller",
+      "awakenIcon": "UI_EquipIcon_Sword_Rockkiller_Awaken"
+    },
+    {
+      "id": "12410",
+      "name": "Lithic Blade",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Lapis",
+      "awakenIcon": "UI_EquipIcon_Claymore_Lapis_Awaken"
+    },
+    {
+      "id": "13406",
+      "name": "Lithic Spear",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Lapis",
+      "awakenIcon": "UI_EquipIcon_Pole_Lapis_Awaken"
+    },
+    {
+      "id": "14502",
+      "name": "Lost Prayer to the Sacred Winds",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Fourwinds",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Fourwinds_Awaken"
+    },
+    {
+      "id": "13513",
+      "name": "Lumidouce Elegy",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Muguet",
+      "awakenIcon": "UI_EquipIcon_Pole_Muguet_Awaken"
+    },
+    {
+      "id": "12412",
+      "name": "Luxurious Sea-Lord",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_MillenniaTuna",
+      "awakenIcon": "UI_EquipIcon_Claymore_MillenniaTuna_Awaken"
+    },
+    {
+      "id": "14301",
+      "name": "Magic Guide",
+      "rarity": 3,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Intro",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Intro_Awaken"
+    },
+    {
+      "id": "12418",
+      "name": "Mailed Flower",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Fleurfair",
+      "awakenIcon": "UI_EquipIcon_Claymore_Fleurfair_Awaken"
+    },
+    {
+      "id": "12415",
+      "name": "Makhaira Aquamarine",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Pleroma",
+      "awakenIcon": "UI_EquipIcon_Claymore_Pleroma_Awaken"
+    },
+    {
+      "id": "14407",
+      "name": "Mappa Mare",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Exotic",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Exotic_Awaken"
+    },
+    {
+      "id": "12433",
+      "name": "Master Key",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Ilmarinen",
+      "awakenIcon": "UI_EquipIcon_Claymore_Ilmarinen_Awaken"
+    },
+    {
+      "id": "14504",
+      "name": "Memory of Dust",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Kunwu",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Kunwu_Awaken"
+    },
+    {
+      "id": "15305",
+      "name": "Messenger",
+      "rarity": 3,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Msg",
+      "awakenIcon": "UI_EquipIcon_Bow_Msg_Awaken"
+    },
+    {
+      "id": "13419",
+      "name": "Missive Windspear",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Windvane",
+      "awakenIcon": "UI_EquipIcon_Pole_Windvane_Awaken"
+    },
+    {
+      "id": "11509",
+      "name": "Mistsplitter Reforged",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Narukami",
+      "awakenIcon": "UI_EquipIcon_Sword_Narukami_Awaken"
+    },
+    {
+      "id": "15412",
+      "name": "Mitternachts Waltz",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Nachtblind",
+      "awakenIcon": "UI_EquipIcon_Bow_Nachtblind_Awaken"
+    },
+    {
+      "id": "13417",
+      "name": "Moonpiercer",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Arakalari",
+      "awakenIcon": "UI_EquipIcon_Pole_Arakalari_Awaken"
+    },
+    {
+      "id": "11434",
+      "name": "Moonweaver's Dawn",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Miekka",
+      "awakenIcon": "UI_EquipIcon_Sword_Miekka_Awaken"
+    },
+    {
+      "id": "13430",
+      "name": "Mountain-Bracing Bolt",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Umpakati",
+      "awakenIcon": "UI_EquipIcon_Pole_Umpakati_Awaken"
+    },
+    {
+      "id": "15416",
+      "name": "Mouun's Moon",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Maria",
+      "awakenIcon": "UI_EquipIcon_Bow_Maria_Awaken"
+    },
+    {
+      "id": "11437",
+      "name": "New Bough",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_SpikedStake",
+      "awakenIcon": "UI_EquipIcon_Sword_SpikedStake_Awaken"
+    },
+    {
+      "id": "14520",
+      "name": "Nightweaver's Looking Glass",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_MenulisRing",
+      "awakenIcon": "UI_EquipIcon_Catalyst_MenulisRing_Awaken"
+    },
+    {
+      "id": "14522",
+      "name": "Nocturne's Curtain Call",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Brisingamen",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Brisingamen_Awaken"
+    },
+    {
+      "id": "14415",
+      "name": "Oathsworn Eye",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Jyanome",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Jyanome_Awaken"
+    },
+    {
+      "id": "12201",
+      "name": "Old Merc's Pal",
+      "rarity": 2,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Oyaji",
+      "awakenIcon": "UI_EquipIcon_Claymore_Oyaji_Awaken"
+    },
+    {
+      "id": "14303",
+      "name": "Otherworldly Story",
+      "rarity": 3,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Lightnov",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Lightnov_Awaken"
+    },
+    {
+      "id": "11516",
+      "name": "Peak Patrol Song",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_XochitlsTube",
+      "awakenIcon": "UI_EquipIcon_Sword_XochitlsTube_Awaken"
+    },
+    {
+      "id": "14201",
+      "name": "Pocket Grimoire",
+      "rarity": 2,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Pocket",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Pocket_Awaken"
+    },
+    {
+      "id": "15507",
+      "name": "Polar Star",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Worldbane",
+      "awakenIcon": "UI_EquipIcon_Bow_Worldbane_Awaken"
+    },
+    {
+      "id": "12427",
+      "name": "Portable Power Saw",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Mechanic",
+      "awakenIcon": "UI_EquipIcon_Claymore_Mechanic_Awaken"
+    },
+    {
+      "id": "15415",
+      "name": "Predator",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Predator",
+      "awakenIcon": "UI_EquipIcon_Bow_Predator_Awaken"
+    },
+    {
+      "id": "11505",
+      "name": "Primordial Jade Cutter",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Morax",
+      "awakenIcon": "UI_EquipIcon_Sword_Morax_Awaken"
+    },
+    {
+      "id": "13505",
+      "name": "Primordial Jade Winged-Spear",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Morax",
+      "awakenIcon": "UI_EquipIcon_Pole_Morax_Awaken"
+    },
+    {
+      "id": "11419",
+      "name": "Prized Isshin Blade",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_YoutouEnchanted",
+      "awakenIcon": "UI_EquipIcon_Sword_YoutouEnchanted"
+    },
+    {
+      "id": "13427",
+      "name": "Prospector's Drill",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Mechanic",
+      "awakenIcon": "UI_EquipIcon_Pole_Mechanic_Awaken"
+    },
+    {
+      "id": "13433",
+      "name": "Prospector's Shovel",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Ilmarinen",
+      "awakenIcon": "UI_EquipIcon_Pole_Ilmarinen_Awaken"
+    },
+    {
+      "id": "14406",
+      "name": "Prototype Amber",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Proto",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Proto_Awaken"
+    },
+    {
+      "id": "12406",
+      "name": "Prototype Archaic",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Proto",
+      "awakenIcon": "UI_EquipIcon_Claymore_Proto_Awaken"
+    },
+    {
+      "id": "15406",
+      "name": "Prototype Crescent",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Proto",
+      "awakenIcon": "UI_EquipIcon_Bow_Proto_Awaken"
+    },
+    {
+      "id": "11406",
+      "name": "Prototype Rancour",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Proto",
+      "awakenIcon": "UI_EquipIcon_Sword_Proto_Awaken"
+    },
+    {
+      "id": "13402",
+      "name": "Prototype Starglitter",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Proto",
+      "awakenIcon": "UI_EquipIcon_Pole_Proto_Awaken"
+    },
+    {
+      "id": "15434",
+      "name": "Rainbow Serpent's Rain Bow",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_ElegguaBow",
+      "awakenIcon": "UI_EquipIcon_Bow_ElegguaBow_Awaken"
+    },
+    {
+      "id": "12405",
+      "name": "Rainslasher",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Perdue",
+      "awakenIcon": "UI_EquipIcon_Claymore_Perdue_Awaken"
+    },
+    {
+      "id": "15427",
+      "name": "Range Gauge",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Mechanic",
+      "awakenIcon": "UI_EquipIcon_Bow_Mechanic_Awaken"
+    },
+    {
+      "id": "15301",
+      "name": "Raven Bow",
+      "rarity": 3,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Crowfeather",
+      "awakenIcon": "UI_EquipIcon_Bow_Crowfeather_Awaken"
+    },
+    {
+      "id": "15303",
+      "name": "Recurve Bow",
+      "rarity": 3,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Curve",
+      "awakenIcon": "UI_EquipIcon_Bow_Curve_Awaken"
+    },
+    {
+      "id": "12510",
+      "name": "Redhorn Stonethresher",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Itadorimaru",
+      "awakenIcon": "UI_EquipIcon_Claymore_Itadorimaru_Awaken"
+    },
+    {
+      "id": "14521",
+      "name": "Reliquary of Truth",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Sistrum",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Sistrum_Awaken"
+    },
+    {
+      "id": "13425",
+      "name": "Rightful Reward",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Vorpal",
+      "awakenIcon": "UI_EquipIcon_Pole_Vorpal_Awaken"
+    },
+    {
+      "id": "14431",
+      "name": "Ring of Yaxche",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Isikhulu",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Isikhulu_Awaken"
+    },
+    {
+      "id": "15404",
+      "name": "Royal Bow",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Theocrat",
+      "awakenIcon": "UI_EquipIcon_Bow_Theocrat_Awaken"
+    },
+    {
+      "id": "12404",
+      "name": "Royal Greatsword",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Theocrat",
+      "awakenIcon": "UI_EquipIcon_Claymore_Theocrat_Awaken"
+    },
+    {
+      "id": "14404",
+      "name": "Royal Grimoire",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Theocrat",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Theocrat_Awaken"
+    },
+    {
+      "id": "11404",
+      "name": "Royal Longsword",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Theocrat",
+      "awakenIcon": "UI_EquipIcon_Sword_Theocrat_Awaken"
+    },
+    {
+      "id": "13408",
+      "name": "Royal Spear",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Theocrat",
+      "awakenIcon": "UI_EquipIcon_Pole_Theocrat_Awaken"
+    },
+    {
+      "id": "15405",
+      "name": "Rust",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Recluse",
+      "awakenIcon": "UI_EquipIcon_Bow_Recluse_Awaken"
+    },
+    {
+      "id": "13434",
+      "name": "Sacrificer's Staff",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Krivule",
+      "awakenIcon": "UI_EquipIcon_Pole_Krivule_Awaken"
+    },
+    {
+      "id": "15403",
+      "name": "Sacrificial Bow",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Fossil",
+      "awakenIcon": "UI_EquipIcon_Bow_Fossil_Awaken"
+    },
+    {
+      "id": "14403",
+      "name": "Sacrificial Fragments",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Fossil",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Fossil_Awaken"
+    },
+    {
+      "id": "12403",
+      "name": "Sacrificial Greatsword",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Fossil",
+      "awakenIcon": "UI_EquipIcon_Claymore_Fossil_Awaken"
+    },
+    {
+      "id": "14424",
+      "name": "Sacrificial Jade",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Yue",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Yue_Awaken"
+    },
+    {
+      "id": "11403",
+      "name": "Sacrificial Sword",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Fossil",
+      "awakenIcon": "UI_EquipIcon_Sword_Fossil_Awaken"
+    },
+    {
+      "id": "11417",
+      "name": "Sapwood Blade",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Arakalari",
+      "awakenIcon": "UI_EquipIcon_Sword_Arakalari_Awaken"
+    },
+    {
+      "id": "15424",
+      "name": "Scion of the Blazing Sun",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Gurabad",
+      "awakenIcon": "UI_EquipIcon_Bow_Gurabad_Awaken"
+    },
+    {
+      "id": "15201",
+      "name": "Seasoned Hunter's Bow",
+      "rarity": 2,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Old",
+      "awakenIcon": "UI_EquipIcon_Bow_Old_Awaken"
+    },
+    {
+      "id": "15432",
+      "name": "Sequence of Solitude",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Stinger",
+      "awakenIcon": "UI_EquipIcon_Bow_Stinger_Awaken"
+    },
+    {
+      "id": "11433",
+      "name": "Serenity's Call",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Ilmarinen",
+      "awakenIcon": "UI_EquipIcon_Sword_Ilmarinen_Awaken"
+    },
+    {
+      "id": "12409",
+      "name": "Serpent Spine",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Kione",
+      "awakenIcon": "UI_EquipIcon_Claymore_Kione_Awaken"
+    },
+    {
+      "id": "15302",
+      "name": "Sharpshooter's Oath",
+      "rarity": 3,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Arjuna",
+      "awakenIcon": "UI_EquipIcon_Bow_Arjuna_Awaken"
+    },
+    {
+      "id": "11438",
+      "name": "Silver Light",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Fajian",
+      "awakenIcon": "UI_EquipIcon_Sword_Fajian_Awaken"
+    },
+    {
+      "id": "11201",
+      "name": "Silver Sword",
+      "rarity": 2,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Silver",
+      "awakenIcon": "UI_EquipIcon_Sword_Silver_Awaken"
+    },
+    {
+      "id": "15513",
+      "name": "Silvershower Heartstrings",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Arcdange",
+      "awakenIcon": "UI_EquipIcon_Bow_Arcdange_Awaken"
+    },
+    {
+      "id": "12306",
+      "name": "Skyrider Greatsword",
+      "rarity": 3,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Mitsurugi",
+      "awakenIcon": "UI_EquipIcon_Claymore_Mitsurugi_Awaken"
+    },
+    {
+      "id": "11306",
+      "name": "Skyrider Sword",
+      "rarity": 3,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Mitsurugi",
+      "awakenIcon": "UI_EquipIcon_Sword_Mitsurugi_Awaken"
+    },
+    {
+      "id": "14501",
+      "name": "Skyward Atlas",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Dvalin",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Dvalin_Awaken"
+    },
+    {
+      "id": "11502",
+      "name": "Skyward Blade",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Dvalin",
+      "awakenIcon": "UI_EquipIcon_Sword_Dvalin_Awaken"
+    },
+    {
+      "id": "15501",
+      "name": "Skyward Harp",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Dvalin",
+      "awakenIcon": "UI_EquipIcon_Bow_Dvalin_Awaken"
+    },
+    {
+      "id": "12501",
+      "name": "Skyward Pride",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Dvalin",
+      "awakenIcon": "UI_EquipIcon_Claymore_Dvalin_Awaken"
+    },
+    {
+      "id": "13502",
+      "name": "Skyward Spine",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Dvalin",
+      "awakenIcon": "UI_EquipIcon_Pole_Dvalin_Awaken"
+    },
+    {
+      "id": "15304",
+      "name": "Slingshot",
+      "rarity": 3,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Sling",
+      "awakenIcon": "UI_EquipIcon_Bow_Sling_Awaken"
+    },
+    {
+      "id": "15433",
+      "name": "Snare Hook",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Ilmarinen",
+      "awakenIcon": "UI_EquipIcon_Bow_Ilmarinen_Awaken"
+    },
+    {
+      "id": "12411",
+      "name": "Snow-Tombed Starsilver",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Dragonfell",
+      "awakenIcon": "UI_EquipIcon_Claymore_Dragonfell_Awaken"
+    },
+    {
+      "id": "14405",
+      "name": "Solar Pearl",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Resurrection",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Resurrection_Awaken"
+    },
+    {
+      "id": "12503",
+      "name": "Song of Broken Pines",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Widsith",
+      "awakenIcon": "UI_EquipIcon_Claymore_Widsith_Awaken"
+    },
+    {
+      "id": "15425",
+      "name": "Song of Stillness",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Vorpal",
+      "awakenIcon": "UI_EquipIcon_Bow_Vorpal_Awaken"
+    },
+    {
+      "id": "13436",
+      "name": "Song of the Vigil",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_GlintstonePolearm",
+      "awakenIcon": "UI_EquipIcon_Pole_GlintstonePolearm_Awaken"
+    },
+    {
+      "id": "11513",
+      "name": "Splendor of Tranquil Waters",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Regalis",
+      "awakenIcon": "UI_EquipIcon_Sword_Regalis_Awaken"
+    },
+    {
+      "id": "13501",
+      "name": "Staff of Homa",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Homa",
+      "awakenIcon": "UI_EquipIcon_Pole_Homa_Awaken"
+    },
+    {
+      "id": "13511",
+      "name": "Staff of the Scarlet Sands",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Deshret",
+      "awakenIcon": "UI_EquipIcon_Pole_Deshret_Awaken"
+    },
+    {
+      "id": "14517",
+      "name": "Starcaller's Watch",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Figurines",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Figurines_Awaken"
+    },
+    {
+      "id": "11430",
+      "name": "Sturdy Bone",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Umpakati",
+      "awakenIcon": "UI_EquipIcon_Sword_Umpakati_Awaken"
+    },
+    {
+      "id": "11504",
+      "name": "Summit Shaper",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Kunwu",
+      "awakenIcon": "UI_EquipIcon_Sword_Kunwu_Awaken"
+    },
+    {
+      "id": "14518",
+      "name": "Sunny Morning Sleep-In",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_SakuraFan",
+      "awakenIcon": "UI_EquipIcon_Catalyst_SakuraFan_Awaken"
+    },
+    {
+      "id": "14516",
+      "name": "Surf's Up",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_MechaPufferfish",
+      "awakenIcon": "UI_EquipIcon_Catalyst_MechaPufferfish_Awaken"
+    },
+    {
+      "id": "11412",
+      "name": "Sword of Descension",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Psalmus",
+      "awakenIcon": "UI_EquipIcon_Sword_Psalmus_Awaken"
+    },
+    {
+      "id": "11428",
+      "name": "Sword of Narzissenkreuz",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Purewill",
+      "awakenIcon": "UI_EquipIcon_Sword_Purewill"
+    },
+    {
+      "id": "13514",
+      "name": "Symphonist of Scents",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Trident",
+      "awakenIcon": "UI_EquipIcon_Pole_Trident_Awaken"
+    },
+    {
+      "id": "12424",
+      "name": "Talking Stick",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_BeastTamer",
+      "awakenIcon": "UI_EquipIcon_Claymore_BeastTamer_Awaken"
+    },
+    {
+      "id": "13432",
+      "name": "Tamayuratei no Ohanashi",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Aoandon",
+      "awakenIcon": "UI_EquipIcon_Pole_Aoandon_Awaken"
+    },
+    {
+      "id": "11410",
+      "name": "The Alley Flash",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Outlaw",
+      "awakenIcon": "UI_EquipIcon_Sword_Outlaw_Awaken"
+    },
+    {
+      "id": "12402",
+      "name": "The Bell",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Troupe",
+      "awakenIcon": "UI_EquipIcon_Claymore_Troupe_Awaken"
+    },
+    {
+      "id": "11409",
+      "name": "The Black Sword",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Bloodstained",
+      "awakenIcon": "UI_EquipIcon_Sword_Bloodstained_Awaken"
+    },
+    {
+      "id": "15515",
+      "name": "The Daybreak Chronicles",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Arianna",
+      "awakenIcon": "UI_EquipIcon_Bow_Arianna_Awaken"
+    },
+    {
+      "id": "11427",
+      "name": "The Dockhand's Assistant",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Mechanic",
+      "awakenIcon": "UI_EquipIcon_Sword_Mechanic_Awaken"
+    },
+    {
+      "id": "15512",
+      "name": "The First Great Magic",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Pledge",
+      "awakenIcon": "UI_EquipIcon_Bow_Pledge_Awaken"
+    },
+    {
+      "id": "11402",
+      "name": "The Flute",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Troupe",
+      "awakenIcon": "UI_EquipIcon_Sword_Troupe_Awaken"
+    },
+    {
+      "id": "15402",
+      "name": "The Stringless",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Troupe",
+      "awakenIcon": "UI_EquipIcon_Bow_Troupe_Awaken"
+    },
+    {
+      "id": "12504",
+      "name": "The Unforged",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Kunwu",
+      "awakenIcon": "UI_EquipIcon_Claymore_Kunwu_Awaken"
+    },
+    {
+      "id": "15409",
+      "name": "The Viridescent Hunt",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Viridescent",
+      "awakenIcon": "UI_EquipIcon_Bow_Viridescent_Awaken"
+    },
+    {
+      "id": "14402",
+      "name": "The Widsith",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Troupe",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Troupe_Awaken"
+    },
+    {
+      "id": "14302",
+      "name": "Thrilling Tales of Dragon Slayers",
+      "rarity": 3,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Pulpfic",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Pulpfic_Awaken"
+    },
+    {
+      "id": "15509",
+      "name": "Thundering Pulse",
+      "rarity": 5,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Narukami",
+      "awakenIcon": "UI_EquipIcon_Bow_Narukami_Awaken"
+    },
+    {
+      "id": "12425",
+      "name": "Tidal Shadow",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Vorpal",
+      "awakenIcon": "UI_EquipIcon_Claymore_Vorpal_Awaken"
+    },
+    {
+      "id": "14514",
+      "name": "Tome of the Eternal Flow",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Iudex",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Iudex_Awaken"
+    },
+    {
+      "id": "11422",
+      "name": "Toukabou Shigure",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Kasabouzu",
+      "awakenIcon": "UI_EquipIcon_Sword_Kasabouzu_Awaken"
+    },
+    {
+      "id": "11303",
+      "name": "Traveler's Handy Sword",
+      "rarity": 3,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Traveler",
+      "awakenIcon": "UI_EquipIcon_Sword_Traveler_Awaken"
+    },
+    {
+      "id": "14512",
+      "name": "Tulaytullah's Remembrance",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Alaya",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Alaya_Awaken"
+    },
+    {
+      "id": "14305",
+      "name": "Twin Nephrite",
+      "rarity": 3,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Phoney",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Phoney_Awaken"
+    },
+    {
+      "id": "11514",
+      "name": "Uraku Misugiri",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Needle",
+      "awakenIcon": "UI_EquipIcon_Sword_Needle_Awaken"
+    },
+    {
+      "id": "12512",
+      "name": "Verdict",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_GoldenVerdict",
+      "awakenIcon": "UI_EquipIcon_Claymore_GoldenVerdict_Awaken"
+    },
+    {
+      "id": "14519",
+      "name": "Vivid Notions",
+      "rarity": 5,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_VaresaTransformer",
+      "awakenIcon": "UI_EquipIcon_Catalyst_VaresaTransformer_Awaken"
+    },
+    {
+      "id": "13504",
+      "name": "Vortex Vanquisher",
+      "rarity": 5,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Kunwu",
+      "awakenIcon": "UI_EquipIcon_Pole_Kunwu_Awaken"
+    },
+    {
+      "id": "14416",
+      "name": "Wandering Evenstar",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Pleroma",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Pleroma_Awaken"
+    },
+    {
+      "id": "12101",
+      "name": "Waster Greatsword",
+      "rarity": 1,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Aniki",
+      "awakenIcon": "UI_EquipIcon_Claymore_Aniki_Awaken"
+    },
+    {
+      "id": "13416",
+      "name": "Wavebreaker's Fin",
+      "rarity": 4,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Maria",
+      "awakenIcon": "UI_EquipIcon_Pole_Maria_Awaken"
+    },
+    {
+      "id": "14430",
+      "name": "Waveriding Whirl",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Umpakati",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Umpakati_Awaken"
+    },
+    {
+      "id": "12303",
+      "name": "White Iron Greatsword",
+      "rarity": 3,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Tin",
+      "awakenIcon": "UI_EquipIcon_Claymore_Tin_Awaken"
+    },
+    {
+      "id": "13301",
+      "name": "White Tassel",
+      "rarity": 3,
+      "weaponType": "Polearm",
+      "icon": "UI_EquipIcon_Pole_Ruby",
+      "awakenIcon": "UI_EquipIcon_Pole_Ruby_Awaken"
+    },
+    {
+      "id": "12407",
+      "name": "Whiteblind",
+      "rarity": 4,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Exotic",
+      "awakenIcon": "UI_EquipIcon_Claymore_Exotic_Awaken"
+    },
+    {
+      "id": "11520",
+      "name": "Whitelake Frostfeather",
+      "rarity": 5,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Swanlake",
+      "awakenIcon": "UI_EquipIcon_Sword_Swanlake_Awaken"
+    },
+    {
+      "id": "15413",
+      "name": "Windblume Ode",
+      "rarity": 4,
+      "weaponType": "Bow",
+      "icon": "UI_EquipIcon_Bow_Fleurfair",
+      "awakenIcon": "UI_EquipIcon_Bow_Fleurfair_Awaken"
+    },
+    {
+      "id": "14410",
+      "name": "Wine and Song",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_Outlaw",
+      "awakenIcon": "UI_EquipIcon_Catalyst_Outlaw_Awaken"
+    },
+    {
+      "id": "14437",
+      "name": "Winter's Heavy Heart",
+      "rarity": 4,
+      "weaponType": "Catalyst",
+      "icon": "UI_EquipIcon_Catalyst_FrostScepter",
+      "awakenIcon": "UI_EquipIcon_Catalyst_FrostScepter_Awaken"
+    },
+    {
+      "id": "11424",
+      "name": "Wolf-Fang",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Boreas",
+      "awakenIcon": "UI_EquipIcon_Sword_Boreas_Awaken"
+    },
+    {
+      "id": "12502",
+      "name": "Wolf's Gravestone",
+      "rarity": 5,
+      "weaponType": "Claymore",
+      "icon": "UI_EquipIcon_Claymore_Wolfmound",
+      "awakenIcon": "UI_EquipIcon_Claymore_Wolfmound_Awaken"
+    },
+    {
+      "id": "11418",
+      "name": "Xiphos' Moonlight",
+      "rarity": 4,
+      "weaponType": "Sword",
+      "icon": "UI_EquipIcon_Sword_Pleroma",
+      "awakenIcon": "UI_EquipIcon_Sword_Pleroma_Awaken"
+    }
+  ]
+}

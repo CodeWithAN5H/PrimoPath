@@ -28,12 +28,12 @@ export function SaveStatusPill({ compact = false }: { compact?: boolean }) {
           ? {
               label: savedAt ? `Saved ${formatClock(savedAt)}` : 'Saved locally',
               icon: <CircleCheck size={13} aria-hidden="true" />,
-              tone: 'border-mint/25 bg-mint/8 text-mint',
+              tone: 'border-mint/25 bg-mint/[0.08] text-mint',
             }
           : {
               label: 'Not saved',
               icon: <CircleAlert size={13} aria-hidden="true" />,
-              tone: 'border-ember/30 bg-ember/8 text-ember',
+              tone: 'border-ember/30 bg-ember/[0.08] text-ember',
             };
 
   return (
@@ -53,11 +53,11 @@ export function StorageBadge() {
   const { backend } = usePlanner();
   const isNone = backend === 'none';
   return (
-    <p className="flex items-start gap-2 text-xs leading-relaxed text-faint">
+    <p className="flex items-start gap-2 text-[11px] leading-relaxed text-faint">
       {isNone ? (
-        <CloudOff size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
+        <CloudOff size={13} className="mt-0.5 shrink-0" aria-hidden="true" />
       ) : (
-        <HardDrive size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
+        <HardDrive size={13} className="mt-0.5 shrink-0" aria-hidden="true" />
       )}
       <span>
         {isNone

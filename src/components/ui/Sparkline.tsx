@@ -3,13 +3,13 @@ import type { ForecastPoint } from '../../domain/forecast';
 import { formatNumber } from '../../lib/format';
 
 /**
- * Cumulative wish forecast rendered as a plain SVG (no chart dependency).
+ * Cumulative wish forecast rendered as plain SVG (no chart dependency).
  * The shape is illustrative; exact values are always shown as text nearby.
  */
 export function Sparkline({
   points,
   label,
-  height = 132,
+  height = 120,
 }: {
   points: readonly ForecastPoint[];
   label: string;
@@ -20,7 +20,7 @@ export function Sparkline({
 
   const width = 640;
   const padX = 6;
-  const padY = 14;
+  const padY = 12;
   const first = points[0]!;
   const last = points[points.length - 1]!;
   const minWishes = Math.min(...points.map((point) => point.wishes), first.wishes);
@@ -33,7 +33,10 @@ export function Sparkline({
     height - padY - ((wishes - minWishes) / span) * (height - padY * 2);
 
   const line = points
-    .map((point, index) => `${index === 0 ? 'M' : 'L'} ${x(index).toFixed(2)} ${y(point.wishes).toFixed(2)}`)
+    .map(
+      (point, index) =>
+        `${index === 0 ? 'M' : 'L'} ${x(index).toFixed(2)} ${y(point.wishes).toFixed(2)}`,
+    )
     .join(' ');
   const area = `${line} L ${x(points.length - 1).toFixed(2)} ${height - padY} L ${x(0).toFixed(2)} ${height - padY} Z`;
 
@@ -50,8 +53,8 @@ export function Sparkline({
       >
         <defs>
           <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="var(--color-gold)" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="var(--color-gold)" stopOpacity="0" />
+            <stop offset="0%" stopColor="var(--color-accent)" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="var(--color-accent)" stopOpacity="0" />
           </linearGradient>
         </defs>
         {[0.25, 0.5, 0.75].map((fraction) => (
@@ -67,8 +70,15 @@ export function Sparkline({
           />
         ))}
         <path d={area} fill={`url(#${gradientId})`} />
-        <path d={line} fill="none" stroke="var(--color-gold)" strokeWidth={2} strokeLinejoin="round" />
-        <circle cx={x(points.length - 1)} cy={y(last.wishes)} r={3.5} fill="var(--color-gold)" />
+        <path
+          d={line}
+          fill="none"
+          stroke="var(--color-accent)"
+          strokeWidth={2}
+          strokeLinejoin="round"
+          strokeLinecap="round"
+        />
+        <circle cx={x(points.length - 1)} cy={y(last.wishes)} r={3.5} fill="var(--color-accent)" />
       </svg>
       <figcaption className="mt-2 flex justify-between text-[11px] text-faint">
         <span className="num">{formatNumber(first.wishes)} now</span>

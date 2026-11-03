@@ -7,32 +7,21 @@ interface FieldShellProps {
   hint?: ReactNode | undefined;
   error?: string | null | undefined;
   children: ReactNode;
-  suffix?: string | undefined;
 }
 
-function FieldShell({ id, label, hint, error, children, suffix }: FieldShellProps) {
+function FieldShell({ id, label, hint, error, children }: FieldShellProps) {
   return (
     <div className="flex flex-col gap-1.5">
       <label htmlFor={id} className="label">
         {label}
       </label>
-      <div className="relative">
-        {children}
-        {suffix ? (
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-xs text-faint"
-          >
-            {suffix}
-          </span>
-        ) : null}
-      </div>
+      <div className="relative">{children}</div>
       {error ? (
         <p id={`${id}-error`} className="text-xs leading-relaxed text-ember" role="alert">
           {error}
         </p>
       ) : hint ? (
-        <p id={`${id}-hint`} className="text-xs leading-relaxed text-faint">
+        <p id={`${id}-hint`} className="text-[11px] leading-relaxed text-faint">
           {hint}
         </p>
       ) : null}
@@ -49,6 +38,7 @@ export function NumberField({
   max,
   hint,
   suffix,
+  srSuffix,
 }: {
   id: string;
   label: string;
@@ -57,7 +47,10 @@ export function NumberField({
   min: number;
   max: number;
   hint?: ReactNode;
+  /** Short visible unit, shown after the value. */
   suffix?: string;
+  /** Readable unit announced to screen readers (e.g. "Primogems"). */
+  srSuffix?: string;
 }) {
   const [text, setText] = useState(() => String(value));
   const [error, setError] = useState<string | null>(null);
@@ -69,7 +62,7 @@ export function NumberField({
   const describedBy = error ? `${id}-error` : hint ? `${id}-hint` : undefined;
 
   return (
-    <FieldShell id={id} label={label} hint={hint} error={error} suffix={suffix}>
+    <FieldShell id={id} label={label} hint={hint} error={error}>
       <input
         id={id}
         type="text"
@@ -79,6 +72,7 @@ export function NumberField({
         value={text}
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy}
+        aria-label={srSuffix ? `${label} (${srSuffix})` : undefined}
         onChange={(event) => {
           const raw = event.target.value;
           setText(raw);
@@ -91,8 +85,16 @@ export function NumberField({
         onBlur={() => {
           if (!error) setText(String(value));
         }}
-        className={`field num ${error ? 'field-invalid' : ''} ${suffix ? 'pr-24' : ''}`}
+        className={`field num ${error ? 'field-invalid' : ''} ${suffix ? 'pr-20' : ''}`}
       />
+      {suffix ? (
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-[11px] text-faint"
+        >
+          {suffix}
+        </span>
+      ) : null}
     </FieldShell>
   );
 }
@@ -124,7 +126,7 @@ export function DateField({
         aria-invalid={error ? true : undefined}
         aria-describedby={error ? `${id}-error` : hint ? `${id}-hint` : undefined}
         onChange={(event) => onChange(event.target.value)}
-        className={`field num appearance-none ${error ? 'field-invalid' : ''}`}
+        className={`field num ${error ? 'field-invalid' : ''}`}
       />
     </FieldShell>
   );
@@ -180,13 +182,13 @@ export function Toggle({
   onChange: (checked: boolean) => void;
 }) {
   return (
-    <div className="flex items-start justify-between gap-4 rounded-xl border border-line-soft bg-void/40 px-3.5 py-3">
+    <div className="flex items-center justify-between gap-4 rounded-xl border border-line-soft bg-abyss/40 px-3.5 py-3">
       <div className="min-w-0">
         <p id={`${id}-label`} className="text-sm font-medium text-ink">
           {label}
         </p>
         {description ? (
-          <p id={`${id}-description`} className="mt-1 text-xs leading-relaxed text-faint">
+          <p id={`${id}-description`} className="mt-1 text-[11px] leading-relaxed text-faint">
             {description}
           </p>
         ) : null}
@@ -199,14 +201,14 @@ export function Toggle({
         aria-labelledby={`${id}-label`}
         aria-describedby={description ? `${id}-description` : undefined}
         onClick={() => onChange(!checked)}
-        className={`relative mt-0.5 h-6 w-11 shrink-0 rounded-full border transition after:absolute after:-inset-2 after:content-[''] ${
-          checked ? 'border-gold/60 bg-gold/30' : 'border-line bg-raised'
+        className={`relative h-6 w-11 shrink-0 rounded-full border transition-colors after:absolute after:-inset-3 after:content-[''] ${
+          checked ? 'border-accent/60 bg-accent/40' : 'border-line bg-raised'
         }`}
       >
         <span
           aria-hidden="true"
           className={`absolute top-0.5 size-5 rounded-full transition-all ${
-            checked ? 'left-[22px] bg-gold' : 'left-0.5 bg-faint'
+            checked ? 'left-[22px] bg-accent-soft' : 'left-0.5 bg-faint'
           }`}
         />
       </button>
@@ -235,7 +237,7 @@ export function SelectField({
         id={id}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="field appearance-none bg-void/80"
+        className="field appearance-none bg-abyss/80"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value} className="bg-panel text-ink">

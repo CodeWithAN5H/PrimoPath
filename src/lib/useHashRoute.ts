@@ -1,25 +1,50 @@
 import { useCallback, useEffect, useState } from 'react';
 
-export type RouteId = 'dashboard' | 'planner';
+export type RouteId = 'home' | 'planner' | 'opportunities' | 'simulator' | 'account';
 
-const ROUTES: readonly RouteId[] = ['dashboard', 'planner'];
+export const ROUTES: readonly RouteId[] = [
+  'home',
+  'planner',
+  'opportunities',
+  'simulator',
+  'account',
+];
 
-/** Path aliases so `#/planner` and `#planner` both work. */
+/**
+ * Hash aliases. `dashboard` and `planner` are kept from Milestone 1 so existing
+ * bookmarks and links keep resolving to the right screen.
+ */
 const HASH_ALIASES: Record<string, RouteId> = {
-  dashboard: 'dashboard',
+  '': 'home',
+  home: 'home',
+  dashboard: 'home',
   planner: 'planner',
+  'wish-planner': 'planner',
+  opportunities: 'opportunities',
+  simulator: 'simulator',
+  'wish-simulator': 'simulator',
+  account: 'account',
 };
 
-function currentRoute(): RouteId {
-  const hash = window.location.hash.replace(/^#\/?/, '').split('?')[0] ?? '';
-  return HASH_ALIASES[hash] ?? 'dashboard';
+/** Maps a `window.location.hash` value to a known route, defaulting to home. */
+export function resolveRoute(hash: string): RouteId {
+  const raw = hash
+    .replace(/^#\/?/, '')
+    .split(/[?&#]/)[0]
+    ?.trim()
+    .toLowerCase();
+  return (raw !== undefined ? HASH_ALIASES[raw] : undefined) ?? 'home';
+}
+
+export function routeHref(route: RouteId): string {
+  return `#/${route}`;
 }
 
 export function useHashRoute(): [RouteId, (route: RouteId) => void] {
-  const [route, setRoute] = useState<RouteId>(currentRoute);
+  const [route, setRoute] = useState<RouteId>(() => resolveRoute(window.location.hash));
 
   useEffect(() => {
-    const onChange = () => setRoute(currentRoute());
+    const onChange = () => setRoute(resolveRoute(window.location.hash));
     window.addEventListener('hashchange', onChange);
     return () => window.removeEventListener('hashchange', onChange);
   }, []);

@@ -10,10 +10,7 @@ export function Card({
   labelledBy?: string;
 }) {
   return (
-    <section
-      aria-labelledby={labelledBy}
-      className={`panel panel-pad min-w-0 ${className}`}
-    >
+    <section aria-labelledby={labelledBy} className={`panel panel-pad min-w-0 ${className}`}>
       {children}
     </section>
   );
@@ -34,21 +31,21 @@ export function CardHeader({
 }) {
   return (
     <div className="mb-4 flex items-start justify-between gap-3">
-      <div className="flex items-start gap-3">
+      <div className="flex min-w-0 items-start gap-2.5">
         {icon ? (
           <span
             aria-hidden="true"
-            className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg border border-line-soft bg-raised text-gold"
+            className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg border border-line-soft bg-raised text-accent"
           >
             {icon}
           </span>
         ) : null}
-        <div>
-          <h2 id={id} className="text-base font-semibold tracking-tight text-ink">
+        <div className="min-w-0">
+          <h2 id={id} className="text-sm font-semibold tracking-tight text-ink">
             {title}
           </h2>
           {description ? (
-            <p className="mt-1 max-w-prose text-sm leading-relaxed text-muted">{description}</p>
+            <p className="mt-1 max-w-prose text-xs leading-relaxed text-muted">{description}</p>
           ) : null}
         </div>
       </div>

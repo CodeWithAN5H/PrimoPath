@@ -1,9 +1,9 @@
-import { LayoutDashboard } from 'lucide-react';
-import { IncomeCard } from '../components/planner/IncomeCard';
-import { ResourcesCard } from '../components/planner/ResourcesCard';
-import { RewardsCard } from '../components/planner/RewardsCard';
+import { House } from 'lucide-react';
+import { BannerStateSection } from '../components/planner/BannerStateSection';
+import { IncomeSection } from '../components/planner/IncomeSection';
+import { ResourcesSection } from '../components/planner/ResourcesSection';
 import { SummaryPanel } from '../components/planner/SummaryPanel';
-import { TargetFormCard } from '../components/planner/TargetFormCard';
+import { TargetSection } from '../components/planner/TargetSection';
 import { Alert } from '../components/ui/Alert';
 import type { RouteId } from '../lib/useHashRoute';
 import { usePlanner } from '../state/PlannerProvider';
@@ -12,19 +12,19 @@ export function PlannerPage({ onNavigate }: { onNavigate: (route: RouteId) => vo
   const { loadNotice, dismissNotice, storageError } = usePlanner();
 
   return (
-    <div className="flex flex-col gap-6">
-      <header className="flex flex-wrap items-end justify-between gap-4">
-        <div>
+    <div className="flex flex-col gap-4 sm:gap-5">
+      <header className="flex flex-wrap items-end justify-between gap-3">
+        <div className="min-w-0">
           <p className="label">Inputs</p>
-          <h1 className="mt-1.5 font-display text-3xl leading-tight sm:text-4xl">Wish Planner</h1>
-          <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
-            Everything here is editable and saved locally as you type. The summary updates with
-            every change, and nothing is sent anywhere.
+          <h1 className="mt-1 font-display text-2xl leading-tight text-ink sm:text-3xl">Wish Planner</h1>
+          <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-muted">
+            Four sections, saved locally as you change them. Open the ones you need — every
+            calculation uses all of them regardless.
           </p>
         </div>
-        <button type="button" onClick={() => onNavigate('dashboard')} className="btn">
-          <LayoutDashboard size={15} aria-hidden="true" />
-          Back to dashboard
+        <button type="button" onClick={() => onNavigate('home')} className="btn">
+          <House size={15} aria-hidden="true" />
+          Home
         </button>
       </header>
 
@@ -40,14 +40,14 @@ export function PlannerPage({ onNavigate }: { onNavigate: (route: RouteId) => vo
         </Alert>
       ) : null}
 
-      <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)]">
-        <div className="flex flex-col gap-5">
-          <ResourcesCard />
-          <TargetFormCard />
-          <IncomeCard />
-          <RewardsCard />
+      <div className="grid items-start gap-3.5 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)] lg:gap-4">
+        <div className="flex min-w-0 flex-col gap-3">
+          <TargetSection />
+          <ResourcesSection />
+          <BannerStateSection />
+          <IncomeSection />
         </div>
-        <SummaryPanel onOpenDashboard={() => onNavigate('dashboard')} />
+        <SummaryPanel onOpenHome={() => onNavigate('home')} />
       </div>
     </div>
   );

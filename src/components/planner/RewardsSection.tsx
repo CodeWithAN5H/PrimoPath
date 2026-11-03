@@ -1,11 +1,10 @@
-import { ListChecks, Plus, Trash2 } from 'lucide-react';
+import { Plus, Trash2 } from 'lucide-react';
+import { NumberField, SelectField, TextField } from '../ui/fields';
 import type { Confidence, OneTimeReward } from '../../domain/schema';
 import { LIMITS } from '../../domain/schema';
 import { CONFIDENCE_LABELS, formatNumber } from '../../lib/format';
 import { createId } from '../../lib/id';
 import { usePlanner } from '../../state/PlannerProvider';
-import { Card, CardHeader } from '../ui/Card';
-import { NumberField, SelectField, TextField } from '../ui/fields';
 
 const CONFIDENCE_OPTIONS = (['confirmed', 'likely', 'uncertain'] as const).map((value) => ({
   value,
@@ -26,8 +25,8 @@ function RewardRow({
   const base = `reward-${reward.id}`;
 
   return (
-    <li className="rounded-xl border border-line-soft bg-void/40 p-3">
-      <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_auto]">
+    <li className="rounded-xl border border-line-soft bg-abyss/40 p-3">
+      <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,10rem)_auto] sm:items-end">
         <TextField
           id={`${base}-label`}
           label={`Reward ${index + 1}`}
@@ -36,31 +35,28 @@ function RewardRow({
           placeholder="e.g. Archon Quest chapter 5"
           maxLength={LIMITS.rewardLabelLength}
         />
-        <div className="flex items-start gap-2 sm:items-end">
-          <div className="min-w-0 flex-1 sm:w-36 sm:flex-none">
-            <SelectField
-              id={`${base}-confidence`}
-              label="Confidence"
-              value={reward.confidence}
-              onChange={(value) => onChange({ confidence: value as Confidence })}
-              options={CONFIDENCE_OPTIONS}
-            />
-          </div>
-          <button
-            type="button"
-            onClick={onRemove}
-            className="btn-icon mt-6 flex size-10 shrink-0 items-center justify-center border border-transparent text-faint hover:border-ember/30 hover:bg-ember/10 hover:text-ember"
-            aria-label={`Remove reward ${reward.label.trim() || index + 1}`}
-          >
-            <Trash2 size={15} aria-hidden="true" />
-          </button>
-        </div>
+        <SelectField
+          id={`${base}-confidence`}
+          label="Confidence"
+          value={reward.confidence}
+          onChange={(value) => onChange({ confidence: value as Confidence })}
+          options={CONFIDENCE_OPTIONS}
+        />
+        <button
+          type="button"
+          onClick={onRemove}
+          className="btn-icon mb-0.5 border border-transparent text-faint hover:border-ember/30 hover:bg-ember/10 hover:text-ember"
+          aria-label={`Remove reward ${reward.label.trim() || index + 1}`}
+        >
+          <Trash2 size={15} aria-hidden="true" />
+        </button>
       </div>
 
       <div className="mt-3 grid gap-3 sm:grid-cols-2">
         <NumberField
           id={`${base}-primogems`}
           label="Primogems"
+          srSuffix="Primogems"
           value={reward.primogems}
           onChange={(primogems) => onChange({ primogems })}
           min={LIMITS.oneTimePrimogems.min}
@@ -70,6 +66,7 @@ function RewardRow({
         <NumberField
           id={`${base}-fates`}
           label="Intertwined Fates"
+          srSuffix="Intertwined Fates"
           value={reward.fates}
           onChange={(fates) => onChange({ fates })}
           min={LIMITS.oneTimeFates.min}
@@ -81,7 +78,8 @@ function RewardRow({
   );
 }
 
-export function RewardsCard() {
+/** One-time reward entries rendered inside planner section D. */
+export function RewardsFields() {
   const { state, dispatch } = usePlanner();
 
   const totals = state.oneTimeRewards.reduce(
@@ -93,45 +91,42 @@ export function RewardsCard() {
   );
 
   return (
-    <Card labelledBy="rewards-title">
-      <CardHeader
-        id="rewards-title"
-        title="One-time and event rewards"
-        description="Add rewards you expect before the deadline and rate how sure you are. Each reward is counted once."
-        icon={<ListChecks size={16} />}
-        action={
-          <button
-            type="button"
-            className="btn !px-3 !py-2 text-xs"
-            onClick={() =>
-              dispatch({
-                type: 'addReward',
-                reward: {
-                  id: createId(),
-                  label: 'Event reward',
-                  primogems: 0,
-                  fates: 0,
-                  confidence: 'likely',
-                },
-              })
-            }
-          >
-            <Plus size={14} aria-hidden="true" />
-            Add
-          </button>
-        }
-      />
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center justify-between gap-2">
+        <p className="text-[11px] leading-relaxed text-faint">
+          Rate each entry so conservative and optimistic forecasts stay honest.
+        </p>
+        <button
+          type="button"
+          className="btn shrink-0 text-xs"
+          onClick={() =>
+            dispatch({
+              type: 'addReward',
+              reward: {
+                id: createId(),
+                label: 'Event reward',
+                primogems: 0,
+                fates: 0,
+                confidence: 'likely',
+              },
+            })
+          }
+        >
+          <Plus size={14} aria-hidden="true" />
+          Add reward
+        </button>
+      </div>
 
       {state.oneTimeRewards.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-line bg-void/30 px-4 py-8 text-center">
+        <div className="rounded-xl border border-dashed border-line bg-abyss/30 px-4 py-6 text-center">
           <p className="text-sm font-medium text-ink">Nothing listed yet</p>
-          <p className="mx-auto mt-1 max-w-sm text-xs leading-relaxed text-faint">
-            Without one-time rewards, every scenario projects the same income. Add an event, a quest
-            chain or a redemption code you are confident about.
+          <p className="mx-auto mt-1 max-w-sm text-[11px] leading-relaxed text-faint">
+            Without one-time rewards every scenario projects the same income. Add something you are
+            confident about.
           </p>
         </div>
       ) : (
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col gap-2.5">
           {state.oneTimeRewards.map((reward, index) => (
             <RewardRow
               key={reward.id}
@@ -144,7 +139,7 @@ export function RewardsCard() {
         </ul>
       )}
 
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-line-soft pt-3 text-xs text-muted">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line-soft pt-3 text-[11px] text-muted">
         <p>
           Listed total:{' '}
           <span className="num font-semibold text-ink">
@@ -152,10 +147,8 @@ export function RewardsCard() {
             {totals.fates > 0 ? ` + ${formatNumber(totals.fates)} Fates` : ''}
           </span>
         </p>
-        <p className="text-faint">
-          Conservative counts confirmed only · Expected adds likely and half of uncertain.
-        </p>
+        <p className="text-faint">Conservative counts confirmed only.</p>
       </div>
-    </Card>
+    </div>
   );
 }

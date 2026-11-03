@@ -1,51 +1,94 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-void: #070910;
-  --color-abyss: #0a0e18;
-  --color-panel: #111725;
-  --color-raised: #161d2e;
-  --color-line: #242d43;
-  --color-line-soft: #1a2132;
-  --color-ink: #eef2fb;
-  --color-muted: #9ba6c0;
-  --color-faint: #74809b;
-  --color-gold: #efc98a;
-  --color-gold-deep: #b8934f;
-  --color-violet: #95a3ff;
-  --color-mint: #63d8ab;
-  --color-ember: #ff9090;
-  --color-amber: #f2b45c;
+  /* Deep charcoal neutrals, never pure black. */
+  --color-abyss: #0b0d12;
+  --color-base: #0e1016;
+  --color-panel: #14171f;
+  --color-raised: #1c2029;
+  --color-line: #2a2f3c;
+  --color-line-soft: #21252f;
+  --color-ink: #f3f4f8;
+  --color-muted: #a7aec0;
+  --color-faint: #7c8496;
+
+  /* Violet is the accent; azure is the quiet secondary. */
+  --color-accent: #a78bfa;
+  --color-accent-deep: #8b5cf6;
+  --color-accent-soft: #ddd6fe;
+  --color-azure: #7dd3fc;
+  --color-mint: #6ee7b7;
+  --color-amber: #fbbf24;
+  --color-ember: #fb7185;
+  /* Gold is reserved for rarity stars and five-star accents. */
+  --color-gold: #f2ce8a;
 
   --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
     sans-serif;
   --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+
+  --animate-rise: rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade: fade 0.3s ease-out both;
+  --animate-pop: pop 0.16s ease-out both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: translateY(-4px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 }
 
 @layer base {
   html {
     color-scheme: dark;
     -webkit-text-size-adjust: 100%;
+    scrollbar-gutter: stable;
   }
 
   body {
-    @apply bg-abyss text-ink font-sans antialiased;
+    @apply bg-base font-sans text-ink antialiased;
     min-height: 100dvh;
+    overflow-x: hidden;
     background-image:
-      radial-gradient(900px 520px at 8% -10%, rgba(149, 163, 255, 0.14), transparent 70%),
-      radial-gradient(760px 420px at 96% 0%, rgba(239, 201, 138, 0.1), transparent 68%),
-      linear-gradient(180deg, #0a0e18 0%, #080b13 100%);
+      radial-gradient(1000px 540px at 10% -12%, rgba(139, 92, 246, 0.16), transparent 66%),
+      radial-gradient(820px 460px at 100% -8%, rgba(125, 211, 252, 0.08), transparent 62%),
+      linear-gradient(180deg, #0e1016 0%, #0b0d12 100%);
     background-attachment: fixed;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-gold);
+    outline: 2px solid var(--color-accent);
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 6px;
   }
 
   ::selection {
-    background: rgba(239, 201, 138, 0.28);
+    background: rgba(167, 139, 250, 0.3);
   }
 
   h1,
@@ -53,30 +96,41 @@
   h3 {
     text-wrap: balance;
   }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 @layer components {
+  /* Shared surfaces: one radius scale and one soft shadow. */
   .panel {
-    @apply rounded-2xl border border-line-soft bg-panel/85 backdrop-blur-[2px];
-    box-shadow: 0 20px 44px -34px rgba(0, 0, 0, 0.95);
+    @apply rounded-2xl border border-line-soft bg-panel/85;
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.03) inset,
+      0 18px 40px -30px rgba(0, 0, 0, 0.95);
   }
 
   .panel-pad {
-    @apply p-5 sm:p-6;
+    @apply p-4 sm:p-5;
+  }
+
+  .panel-quiet {
+    @apply rounded-xl border border-line-soft bg-abyss/40;
   }
 
   .label {
-    @apply text-[11px] font-semibold uppercase tracking-[0.14em] text-faint;
+    @apply text-[11px] font-semibold uppercase tracking-[0.13em] text-faint;
   }
 
   .field {
-    @apply w-full rounded-xl border border-line bg-void/70 px-3.5 py-2.5 text-sm text-ink outline-none transition;
-    @apply placeholder:text-faint/80 hover:border-line/90;
+    @apply min-h-11 w-full rounded-xl border border-line bg-abyss/70 px-3.5 py-2.5 text-sm text-ink outline-none transition-colors;
+    @apply placeholder:text-faint/80 hover:border-line;
   }
 
   .field:focus {
-    @apply border-gold/60 bg-void;
-    box-shadow: 0 0 0 3px rgba(239, 201, 138, 0.12);
+    @apply border-accent/60 bg-abyss;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.14);
   }
 
   .field-invalid {
@@ -84,20 +138,24 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-line px-3.5 py-2.5 text-sm font-medium text-ink transition;
-    @apply hover:border-gold/45 hover:bg-raised active:translate-y-px;
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-line bg-raised/40 px-3.5 py-2.5 text-sm font-medium text-ink transition-colors;
+    @apply hover:border-accent/40 hover:bg-raised active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
   }
 
   .btn-primary {
-    @apply border-gold/50 bg-gold/15 text-gold hover:border-gold/70 hover:bg-gold/20;
+    @apply border-accent/45 bg-accent/15 text-accent-soft hover:border-accent/65 hover:bg-accent/25;
   }
 
   .btn-ghost {
-    @apply border-transparent text-muted hover:text-ink;
+    @apply border-transparent bg-transparent text-muted hover:bg-raised/60 hover:text-ink;
   }
 
   .btn-icon {
-    @apply rounded-lg p-2.5 text-faint transition hover:bg-raised hover:text-ink;
+    @apply inline-flex size-10 items-center justify-center rounded-lg text-faint transition-colors hover:bg-raised hover:text-ink;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line-soft bg-raised/60 px-2.5 py-1 text-[11px] font-medium text-muted;
   }
 
   .divider {
@@ -106,12 +164,16 @@
 
   .num {
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
 
   .scrollbar-slim {
     scrollbar-width: thin;
     scrollbar-color: var(--color-line) transparent;
+  }
+
+  .card-enter {
+    animation: var(--animate-rise);
   }
 }
 
@@ -120,6 +182,8 @@
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
