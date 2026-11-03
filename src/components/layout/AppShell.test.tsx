@@ -22,6 +22,9 @@ describe('AppShell navigation', () => {
     expect(labels.some((label) => label?.includes('Opportunities'))).toBe(true);
     expect(labels.some((label) => label?.includes('Wish Simulator'))).toBe(true);
     expect(labels.some((label) => label?.includes('Account'))).toBe(true);
+    expect(within(navs[0]!).getByRole('button', { name: /Opportunities/ }).textContent).not.toContain(
+      'Soon',
+    );
 
     expect(within(navs[0]!).getByRole('button', { name: /Home/ })).toHaveAttribute(
       'aria-current',

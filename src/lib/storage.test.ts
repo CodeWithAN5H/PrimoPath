@@ -16,7 +16,7 @@ const state = {
 
 async function writeRawRecord(payload: unknown): Promise<void> {
   const db = await new Promise<IDBDatabase>((resolve, reject) => {
-    const request = indexedDB.open('primopath', 1);
+    const request = indexedDB.open('primopath');
     request.onupgradeneeded = () => {
       if (!request.result.objectStoreNames.contains('planner')) {
         request.result.createObjectStore('planner');
@@ -36,7 +36,7 @@ async function writeRawRecord(payload: unknown): Promise<void> {
 
 async function readRawRecord(): Promise<unknown> {
   const db = await new Promise<IDBDatabase>((resolve, reject) => {
-    const request = indexedDB.open('primopath', 1);
+    const request = indexedDB.open('primopath');
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error);
   });

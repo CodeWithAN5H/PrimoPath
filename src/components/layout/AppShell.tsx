@@ -29,7 +29,6 @@ export const NAV_ITEMS: readonly NavItem[] = [
     label: 'Opportunities',
     shortLabel: 'Opportunities',
     icon: Sparkles,
-    planned: true,
   },
   { id: 'simulator', label: 'Wish Simulator', shortLabel: 'Simulator', icon: Dices, planned: true },
   { id: 'account', label: 'Account', shortLabel: 'Account', icon: CircleUserRound, planned: true },

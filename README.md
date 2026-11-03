@@ -5,8 +5,9 @@ Enter your Primogems, Intertwined Fates and banner state; PrimoPath shows what y
 what you will have by the deadline under three income scenarios, and how far that is from a
 worst-case guarantee.
 
-**Milestone 1.5 — UI/UX redesign and searchable target selector.** No accounts, no live game data,
-no fabricated numbers.
+**Milestones 1, 1.5 and 2 are complete.** Milestone 2 adds a sourced reward catalogue, local
+opportunity progress and a transparent Primogem opportunity optimizer. Milestone 3 — wish
+probability simulation — is next. No accounts, no live game data, no fabricated reward numbers.
 
 ## Quick start
 
@@ -17,51 +18,132 @@ npm install
 npm run dev        # http://localhost:5173
 ```
 
-| Command             | What it does                                        |
-| ------------------- | --------------------------------------------------- |
-| `npm run dev`       | Vite dev server with hot reload                     |
-| `npm test`          | Vitest tests (single run)                           |
-| `npm run test:watch`| Vitest in watch mode                                |
-| `npm run typecheck` | `tsc --noEmit` under strict settings                |
-| `npm run build`     | Typecheck, then production build into `dist/`       |
-| `npm run preview`   | Serve the production build locally                  |
-| `npm run data:items`| Regenerate the character/weapon catalogue           |
+| Command              | What it does                                        |
+| -------------------- | --------------------------------------------------- |
+| `npm run dev`        | Vite dev server with hot reload                     |
+| `npm test`           | Vitest tests (single run)                           |
+| `npm run test:watch` | Vitest in watch mode                                |
+| `npm run typecheck`  | `tsc --noEmit` under strict settings                |
+| `npm run build`      | Typecheck, then production build into `dist/`       |
+| `npm run preview`    | Serve the production build locally                  |
+| `npm run data:items` | Regenerate the character/weapon catalogue           |
 
 Routes are hash-based:
 
-| Route              | Screen                                                    |
-| ------------------ | --------------------------------------------------------- |
-| `#/home`           | Home dashboard (also reachable at `#/dashboard`)          |
-| `#/planner`        | Wish Planner (unchanged route from Milestone 1)           |
-| `#/opportunities`  | Placeholder — reward optimizer is Milestone 2             |
-| `#/simulator`      | Placeholder — probability engine is Milestone 3           |
-| `#/account`        | Local-first storage status; no accounts exist yet         |
+| Route             | Screen                                                       |
+| ----------------- | ------------------------------------------------------------ |
+| `#/home`          | Home dashboard (also reachable at `#/dashboard`)             |
+| `#/planner`       | Wish Planner (Milestone 1 inputs and forecast)               |
+| `#/opportunities` | Reward catalogue, progress tracking and ranked opportunities |
+| `#/simulator`     | Placeholder — probability engine is Milestone 3              |
+| `#/account`       | Local-first storage status; no accounts exist yet            |
 
 ## What works today
 
-- **Home** answers three questions on one screen: where you stand (target banner card with artwork,
-  deadline, available and projected wishes), what your chances look like (conservative, expected and
-  optimistic projections against the worst-case ceiling), and what to do next (a clear route into the
-  planner, plus an honest "coming soon" state for the reward optimizer). Every assumption is behind
-  an expandable disclosure.
+- **Home** answers three questions on one screen: where you stand (target banner, available and
+  projected wishes), what your chances look like (conservative, expected and optimistic projections
+  against the worst-case ceiling), and what to do next. The "Next opportunity" card shows the top
+  ranked unfinished reward, the total obtainable Primogems/wishes and an expiring-soon warning, with
+  a route into Opportunities. Every assumption sits behind an expandable disclosure.
 - **Wish Planner** groups its inputs into four labelled sections — A target banner, B current
   resources, C banner state, D future income — with the advanced ones collapsed by default and a
-  live summary of each section in its header. All Milestone 1 inputs remain: banner type, target,
-  start/end dates, Primogems, Fates, pity, character guarantee or weapon Fate Points, recurring
-  income, and one-time rewards with confidence.
-- **Searchable target selector** replaces the free-text name field: search-as-you-type from one
-  character, keyboard navigation, touch selection, clear and replace, no duplicate rows, artwork
-  with a monogram fallback, and a labelled "custom target" path for names outside the catalogue.
+  live summary of each section in its header. Banner type, target, start/end dates, Primogems,
+  Fates, pity, character guarantee or weapon Fate Points, recurring income, and one-time rewards
+  with confidence all remain from Milestone 1.
+- **Opportunities** ranks what is still obtainable before your target deadline. It shows remaining
+  Primogems and wishes, expiring rewards, completion progress, the additional wishes from all
+  opportunities, and the gap after them. Each row exposes reward, effort, recurrence, availability,
+  prerequisites, source and verification date, plus progress controls. Category and status filters
+  narrow the full list; four recommendations sit above it with a written reason.
+- **Progress tracking** — not started, in progress, done, or not applicable; per-reset completion for
+  daily/monthly rewards; partial progress for exploration/quest-style entries; a user reward
+  correction; and custom opportunities that can be added, edited and deleted. Everything is saved
+  immediately to IndexedDB (localStorage fallback) and restored on reload.
+- **Searchable target selector** — search-as-you-type from one character, keyboard navigation,
+  touch selection, clear and replace, no duplicate rows, artwork with a monogram fallback, and a
+  labelled "custom target" path for names outside the catalogue.
 - **Validation** — pity, fate-point and numeric fields reject decimals and out-of-range values with
   an inline message; an end date before the start date blocks forecasting instead of guessing.
-- **Local persistence** — unchanged format and storage keys. Every change is saved to IndexedDB
-  (localStorage fallback) after a short debounce, restored on reload, and flushed on `pagehide`.
-  Unreadable saved payloads are never deleted; they are copied to localStorage under
-  `primopath:unreadable-backup` and reported.
 - **Responsive shell** — compact 236 px sidebar with icons and labels on desktop; sticky header plus
   a five-item bottom bar with 56 px touch targets on mobile. No horizontal scrolling at 360 px.
 - **Motion** — CSS transitions for cards, disclosures, progress bars and suggestion lists; numbers
   ease with a small `requestAnimationFrame` hook. Everything respects `prefers-reduced-motion`.
+
+## Reward catalogue and data reliability
+
+The catalogue lives in `src/data/rewardCatalogue.ts` and is parsed against the zod schema at module
+load, so malformed data fails loudly rather than silently changing a total. It is deliberately
+small: only rewards whose amounts are stable enough to attribute are bundled.
+
+| Opportunity                        | Reward counted               | Reset             | Status    | Source                                                                                                                        |
+| ---------------------------------- | ---------------------------- | ----------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Daily Commissions                  | 60 Primogems/day             | Daily             | Verified  | [HoYoLAB — Daily Commissions guide](https://www.hoyolab.com/article/35566777)                                                  |
+| Spiral Abyss — Floors 9–12         | 800 Primogems/reset          | Monthly, day 16   | Verified  | [HoYoverse Support — Abyss reset and rewards](https://support.hoyoverse.com/hc/en-us/articles/50333950598553-When-does-the-Spiral-Abyss-reset-and-what-are-the-rewards) |
+| Imaginarium Theater — Performance Tour | 620 Primogems (range 620–1,000) | Monthly, day 1 | Estimated | [Hu Tao guide — Imaginarium Theater rewards](https://hutaobot.moe/guides/imaginarium-theater/rewards)                          |
+
+All three were checked on **2026-11-03**. Notes and limitations:
+
+- The Spiral Abyss reset schedule is official; the 800-Primogem-per-reset amount is corroborated by
+  the community Hu Tao guide named in the entry's source label.
+- Imaginarium Theater is **estimated**: sources disagree between 620 and 1,000 Primogems. The
+  optimizer always counts the conservative 620 and displays the full range. The upper bound is never
+  added to a total.
+- Effort figures (15/120/90 minutes) are PrimoPath estimates for ranking only, not sourced data.
+- A source older than 180 days is flagged stale in the row and loses 8 score points. It is not hidden.
+- Catalogue updates are a code change: edit the entry, update `verifiedOn`, and run `npm test`.
+  Progress records are keyed by opportunity `id` in a separate store, so a catalogue update can
+  never reset completion. Never reuse or rename an existing id for a different reward.
+- **Not bundled:** time-limited events, web events, redeem codes, chest counts, exploration totals,
+  quest rewards and achievements. Their values and deadlines change too often to verify offline, so
+  the app asks you to enter them rather than inventing them. Once entered they are labelled
+  "Your entry" and ranked alongside sourced rewards.
+- There is no HoYoverse account connection, scraping, cookie or token access, and no automatic
+  completion detection. PrimoPath cannot know what you have already claimed in game.
+
+## Opportunity optimizer
+
+`src/domain/rewardOptimizer.ts` is pure TypeScript. The UI supplies the catalogue, saved progress
+and a read-only snapshot of the planner (today, deadline, daily income, one-time reward labels,
+budget, projection and guarantee) and receives evaluations, totals and ranked recommendations.
+
+**Score (0–100), rounded:**
+
+| Factor              | Weight | Normalisation                                                       |
+| ------------------- | ------ | ------------------------------------------------------------------- |
+| Remaining reward    | 40%    | Primogems still obtainable ÷ 1,600, capped at 1                    |
+| Reward per minute   | 30%    | (Primogems ÷ max(10, effort minutes)) ÷ 20, capped at 1             |
+| Urgency             | 18%    | Only with an end date: `1 − days left ÷ 14`, clamped to 0–1         |
+| Confidence          | 12%    | Verified 1.0, estimated 0.55, user-entered 0.7                      |
+
+A stale source subtracts 8 points. Scores ≥ 60 are **High priority**, ≥ 35 **Medium**, otherwise
+**Low**. Every available row receives short reasons generated from the same facts — expiry, reward
+size, effort, verification status, recurrence count, prerequisites, stale source, or the daily-income
+shortfall — so no recommendation is unexplained.
+
+**Exclusions and double-count protection:**
+
+- Done, not-applicable, expired, not-yet-available and duplicate-name entries are excluded from the
+  obtainable totals.
+- Repeatable rewards count the open cycle plus every future reset on or before the deadline; a
+  completed current cycle removes one occurrence without blocking the rest.
+- Daily Commissions counts only the shortfall against the planner's `dailyPrimogems` (60/day with a
+  planner already counting 60/day yields zero, not 60).
+- A planner one-time reward whose normalized name meaningfully matches an opportunity also yields
+  zero for that opportunity.
+- A custom opportunity with the same name as a catalogue reward is displayed but counted once.
+- Selecting "Include in my opportunity plan" is stored separately and adds a second, clearly-labelled
+  projection. It never writes into the planner state, so the existing forecast scenarios are
+  untouched.
+
+## Storing progress
+
+Planner data keeps its Milestone 1 format and keys. The shared IndexedDB database was bumped from
+version 1 to version 2 to add a separate `opportunities` object store; existing planner records are
+not rewritten. Progress is mirrored under `primopath:opportunities:v1` when IndexedDB is
+unavailable. An unreadable opportunity payload is never deleted: it is copied to
+`primopath:opportunities-unreadable-backup` and reported. Planner payloads keep their existing
+`primopath:unreadable-backup` behaviour. Writes are immediate rather than debounced so a completion
+or undo survives an immediate refresh.
 
 ## Character and weapon catalogue
 
@@ -82,7 +164,7 @@ separate collections and are joined by a discriminated union, so banner-type fil
 Search (`src/domain/itemSearch.ts`) is a pure, dependency-free scorer: case-insensitive,
 punctuation-insensitive, matches partial names and any word order, falls back to subsequence and
 then Levenshtein matching with a typo budget of 1–2 edits depending on query length, and never
-returns duplicate rows. It is covered by unit tests and is reusable for any future item picker.
+returns duplicate rows.
 
 ### Artwork
 
@@ -104,42 +186,51 @@ Game art remains the property of HoYoverse; PrimoPath is an unofficial fan tool.
 ```
 scripts/generate-items.mjs   builds src/data/items.json from genshin-db
 src/
-  data/items.json   generated characters and weapons (names, rarity, icons)
-  domain/           pure business logic, no React, no DOM
-    mechanics.ts    versioned mechanics config (hard pity, rates, source, verified date)
-    schema.ts       zod schemas + inferred types + defaults (single source of truth)
-    wishes.ts       Primogems/Fates → wishes, leftover, shortfall, cost to close a gap
-    forecast.ts     scenario weights, deadline projections, cumulative forecast series
-    guarantee.ts    character and weapon worst-case budgets with explanations
-    validation.ts   integer field parsing and banner date validation
-    plannerView.ts  composes everything into the view model the UI renders
-    items.ts        typed item catalogue, lookups, artwork URLs, dataset metadata
-    itemSearch.ts   fuzzy/partial name matching used by the selector
-    dates.ts        UTC-safe ISO date helpers
+  data/
+    items.json            generated characters and weapons
+    rewardCatalogue.ts    bundled, sourced reward definitions (3 entries)
+  domain/                 pure business logic, no React, no DOM
+    mechanics.ts          versioned mechanics config (hard pity, rates, source, verified date)
+    schema.ts             planner zod schemas + inferred types + defaults
+    wishes.ts             Primogems/Fates → wishes, leftover, shortfall, cost to close a gap
+    forecast.ts           scenario weights, deadline projections, cumulative forecast series
+    guarantee.ts          character and weapon worst-case budgets with explanations
+    validation.ts         integer field parsing and banner date validation
+    plannerView.ts        composes the planner into the view model the UI renders
+    items.ts              typed item catalogue, lookups, artwork URLs, dataset metadata
+    itemSearch.ts         fuzzy/partial name matching used by the selector
+    opportunity.ts        reward/progress schemas, cycles, availability, remaining rewards
+    rewardOptimizer.ts    evaluation, scoring, reasons, totals and plan impact
+    dates.ts              UTC-safe ISO date helpers
   lib/
-    storage.ts      IndexedDB store with validated envelopes and localStorage fallback
-    format.ts       number/date/label formatting
+    storage.ts            planner IndexedDB store (v2) with validated envelopes + fallback
+    opportunityStorage.ts separate progress store, migration, unreadable backup
+    format.ts             number/date/label formatting
     useAnimatedNumber.ts  reduced-motion-aware number easing
-    useHashRoute.ts  five-section routing with Milestone 1 aliases
+    useHashRoute.ts       five-section routing with Milestone 1 aliases
   state/
-    plannerReducer.ts   pure reducer (add/update/remove rewards, plan patches, banner switch)
-    PlannerProvider.tsx context, hydration, debounced autosave, save status
+    plannerReducer.ts     pure planner reducer
+    PlannerProvider.tsx   planner context, hydration, debounced autosave
+    opportunityReducer.ts pure progress reducer (status, cycles, overrides, custom entries)
+    OpportunityProvider.tsx progress hydration, immediate autosave, optimizer summary
   components/
-    ui/         Card, Badge, Alert, Disclosure, SegmentedControl, Sparkline, fields, SaveStatus,
-                ItemCombobox, ItemArt
-    layout/     AppShell (sidebar + bottom navigation), PlaceholderPage
-    home/       target banner, resources, forecast, guarantee, next opportunity
-    planner/    sections A–D plus the sticky at-a-glance panel
-  pages/        HomePage, PlannerPage, OpportunitiesPage, SimulatorPage, AccountPage
+    ui/                   Card, Badge, Alert, Disclosure, SegmentedControl, Sparkline, fields,
+                          SaveStatus, ItemCombobox, ItemArt
+    layout/               AppShell (sidebar + bottom navigation), PlaceholderPage
+    home/                 target banner, resources, forecast, guarantee, opportunity summary
+    planner/              sections A–D plus the sticky at-a-glance panel
+    opportunities/        overview, ranked row/details, custom form, formatting
+  pages/                  HomePage, PlannerPage, OpportunitiesPage, SimulatorPage, AccountPage
+  test/opportunityFactory.ts  shared domain fixture
 ```
 
-Data flows one way: form input → validated value → reducer → `buildPlannerView` → presentational
-components. The probability engine in Milestone 3 will consume `src/domain/mechanics.ts` and the
-same plan state; no UI rewrite is needed to add it.
+Data flows one way: input → validated value → reducer → pure view/optimizer model → presentational
+components. Ranking and reward arithmetic never live in a React component.
 
 ## Math and assumptions
 
-Unchanged from Milestone 1 — no calculation, guarantee rule or forecast assumption was altered.
+Unchanged from Milestone 1 — no planner calculation, guarantee rule or forecast assumption was
+altered by Milestone 2.
 
 - **Wishes:** `Intertwined Fates + floor(Primogems / 160)`. Leftover Primogems are always shown.
   Acquaint Fates are not modelled because they cannot be spent on these banners.
@@ -164,16 +255,19 @@ component.
   `aria-activedescendant`, `aria-autocomplete` and option-level selection state.
 - Collapsed planner and forecast sections stay in the DOM for animation but are `inert` and
   `aria-hidden`, so they leave the tab order and screen-reader flow.
+- Opportunity rows are `<article>` elements with labelled expand/collapse buttons, grouped sections
+  with accessible names, labelled filter selects, and native checkbox/range inputs.
+- Category and status filters are labelled; progress status uses a labelled segmented control.
 - Inputs have associated labels plus readable units; numeric fields expose a screen-reader unit.
 - Touch targets are at least 44 px; the mobile bar is 56 px tall.
 - `prefers-reduced-motion: reduce` removes transitions and animations, and the number hook jumps
   straight to its final value.
 - Colour pairs target readable contrast on the charcoal surfaces; state is never conveyed by colour
-  alone (covered / short / planned always have text).
+  alone (Verified/Estimated/Completed/Already counted always have text).
 
 ## Tests
 
-`npm test` runs 90 assertions across 14 files:
+`npm test` runs **165 tests across 21 files**:
 
 | File | Covers |
 | --- | --- |
@@ -184,27 +278,51 @@ component.
 | `domain/plannerView.test.ts` | composed budget/projection/gap, blocked forecasting, banner switching |
 | `domain/itemSearch.test.ts` | partial, case-insensitive, multi-word, typo, punctuation, duplicate and limit behaviour |
 | `domain/items.test.ts` | dataset size, unique ids/names, typed lookups, artwork URL and fallback |
-| `state/plannerReducer.test.ts` | reward add/update/remove, id immutability, independent plans |
-| `lib/storage.test.ts` | round-trip, corrupt-record rejection without data deletion, localStorage fallback |
+| `domain/opportunity.test.ts` | schema rejection cases, reset cycles, availability, recurring/one-time remaining rewards, progress, overrides, expiry and staleness |
+| `domain/rewardOptimizer.test.ts` | ranking order, explanations, stale penalty, exclusions, repeatable cycles, daily/label/name double-counting, totals and plan gaps |
+| `data/rewardCatalogue.test.ts` | every entry validates, unique ids/names, source and date present, stable categories only, expected resets |
+| `state/plannerReducer.test.ts` | planner reward add/update/remove, id immutability, independent plans |
+| `state/opportunityReducer.test.ts` | complete/undo, per-reset toggles, clamps, reward correction, plan selection, custom add/update/delete, hydration |
+| `lib/storage.test.ts` | planner round-trip, corrupt-record rejection without data deletion, localStorage fallback |
+| `lib/opportunityStorage.test.ts` | progress round-trip, planner coexistence, raw-payload preservation, legacy migration, invalid-record rejection, fallback, selective clearing |
 | `lib/useHashRoute.test.ts` | five routes plus Milestone 1 aliases and unknown-hash fallback |
 | `lib/useAnimatedNumber.test.ts` | reduced-motion jump and initial value |
 | `components/ui/ItemCombobox.test.tsx` | typeahead, partial/typo matches, keyboard select, Escape, clear, custom target, kind filtering |
 | `components/ui/Disclosure.test.tsx` | expanded state, inert/aria-hidden when collapsed |
-| `components/layout/AppShell.test.tsx` | five destinations, active state, navigation callback, skip link |
+| `components/layout/AppShell.test.tsx` | five destinations, active state, working Opportunities destination, navigation callback, skip link |
+| `pages/OpportunitiesPage.test.tsx` | overview, ranking order, category/status filters, complete/undo, custom create, duplicate rejection, remount persistence, planner link |
+| `pages/HomePage.test.tsx` | live opportunity summary and navigation into Opportunities |
 
-Storage tests run against `fake-indexeddb`; UI interaction tests use Testing Library. Layout and
-persistence were additionally checked in a real Chromium session at 390 × 844, 1280 × 900 and
-1440 × 900 (see the milestone report for what was and was not verified).
+Storage tests run against `fake-indexeddb`; UI interaction tests use Testing Library. Layout and the
+Milestone 2 flows were additionally checked in Chromium at 1280 × 900, 390 × 844 and 360 × 800:
+filters, complete/undo including an immediate refresh, custom create/edit/delete, plan selection,
+double-counting with daily income, the Home card, and zero horizontal overflow with no console
+errors.
+
+## Known limitations
+
+- The bundled catalogue is intentionally tiny. Events, codes, quests and exploration depend on the
+  user entering amounts; they are never inferred from progress percentages.
+- Effort estimates and the 1,600-Primogem score normalisation are heuristics, not measured data.
+  They rank sensibly but are not a claim about your account.
+- Imaginarium Theater's reward is presented as a 620–1,000 range with only 620 counted.
+- Rewards are counted to the planner's banner deadline only, and no automatic detection of
+  in-game completion exists.
+- Progress is local to one browser profile. Clearing site data removes it; there is no account or
+  sync in this milestone.
+- The production bundle is a single ~504 kB JS chunk (143 kB gzip). Vite warns about the 500 kB
+  threshold; route-level code splitting is a future optimisation.
 
 ## Deliberately not built yet
 
-Wish probability simulation, the reward catalogue and optimizer, live event or banner feeds,
-character builds, accounts, cloud sync, third-party imports, service-worker offline caching and PWA
-install. The Opportunities, Wish Simulator and Account screens are clearly labelled placeholders —
-they contain no fake data, disabled-looking fake controls or invented numbers.
+Wish probability simulation and Capturing Radiance modelling (Milestone 3), a full character build
+optimizer, accounts, cloud sync, third-party imports, live event/banner feeds, social features, paid
+APIs, service-worker offline caching and PWA install. The Wish Simulator and Account screens remain
+clearly labelled placeholders with no fake data or disabled-looking fake controls.
 
 ## Privacy
 
 PrimoPath never asks for HoYoverse credentials, cookies or session tokens, never connects to a game
-account, and never uploads your plan. Planner data stays in the browser's local storage. The only
-outbound requests are for character and weapon icons from the public asset mirror described above.
+account, and never uploads your plan or progress. Both planner and opportunity data stay in the
+browser. The only outbound requests are for character and weapon icons from the public asset mirror
+described above.

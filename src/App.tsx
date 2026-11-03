@@ -5,6 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { OpportunitiesPage } from './pages/OpportunitiesPage';
 import { PlannerPage } from './pages/PlannerPage';
 import { SimulatorPage } from './pages/SimulatorPage';
+import { OpportunityProvider } from './state/OpportunityProvider';
 import { PlannerProvider } from './state/PlannerProvider';
 
 function Page({ route, onNavigate }: { route: RouteId; onNavigate: (route: RouteId) => void }) {
@@ -38,7 +39,9 @@ function RoutedApp() {
 export function App() {
   return (
     <PlannerProvider>
-      <RoutedApp />
+      <OpportunityProvider>
+        <RoutedApp />
+      </OpportunityProvider>
     </PlannerProvider>
   );
 }

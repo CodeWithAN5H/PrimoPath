@@ -1,7 +1,7 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { ForecastOverviewCard } from '../components/home/ForecastOverviewCard';
 import { GuaranteeSummaryCard } from '../components/home/GuaranteeSummaryCard';
-import { NextOpportunityCard } from '../components/home/NextOpportunityCard';
+import { OpportunitySummaryCard } from '../components/home/OpportunitySummaryCard';
 import { ResourceOverviewCard } from '../components/home/ResourceOverviewCard';
 import { TargetBannerCard } from '../components/home/TargetBannerCard';
 import { Alert } from '../components/ui/Alert';
@@ -78,7 +78,7 @@ export function HomePage({ onNavigate }: { onNavigate: (route: RouteId) => void 
         <ResourceOverviewCard />
         <ForecastOverviewCard />
         <GuaranteeSummaryCard />
-        <NextOpportunityCard onOpenOpportunities={() => onNavigate('opportunities')} />
+        <OpportunitySummaryCard onOpenOpportunities={() => onNavigate('opportunities')} />
       </div>
 
       <p className="flex items-center justify-center gap-2 pb-1 text-[11px] text-faint">

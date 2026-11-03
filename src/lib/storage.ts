@@ -9,8 +9,10 @@ import { plannerStateSchema, type PlannerState } from '../domain/schema';
  * usable. Nothing leaves the device in Milestone 1.
  */
 const DB_NAME = 'primopath';
-const DB_VERSION = 1;
+/** Version 2 adds the opportunity-progress store; planner data is untouched by the upgrade. */
+const DB_VERSION = 2;
 const STORE_NAME = 'planner';
+export const OPPORTUNITY_STORE_NAME = 'opportunities';
 const RECORD_KEY = 'current';
 const MIRROR_KEY = 'primopath:state:v1';
 const CORRUPT_BACKUP_KEY = 'primopath:unreadable-backup';
@@ -32,11 +34,11 @@ interface StoredEnvelope {
   state: unknown;
 }
 
-function hasIndexedDb(): boolean {
+export function hasIndexedDb(): boolean {
   return typeof indexedDB !== 'undefined';
 }
 
-function hasLocalStorage(): boolean {
+export function hasLocalStorage(): boolean {
   try {
     return typeof localStorage !== 'undefined';
   } catch {
@@ -44,13 +46,16 @@ function hasLocalStorage(): boolean {
   }
 }
 
-function openDatabase(): Promise<IDBDatabase> {
+export function openDatabase(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
     request.onupgradeneeded = () => {
       const db = request.result;
       if (!db.objectStoreNames.contains(STORE_NAME)) {
         db.createObjectStore(STORE_NAME);
+      }
+      if (!db.objectStoreNames.contains(OPPORTUNITY_STORE_NAME)) {
+        db.createObjectStore(OPPORTUNITY_STORE_NAME);
       }
     };
     request.onsuccess = () => resolve(request.result);
